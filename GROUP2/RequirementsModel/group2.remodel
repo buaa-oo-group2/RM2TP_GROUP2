@@ -1,0 +1,2 @@
+UseCaseModel GROUP2 {Service GROUP2System {} Service ThirdPartyServices {}}
+DomainModel GROUP2 {}
