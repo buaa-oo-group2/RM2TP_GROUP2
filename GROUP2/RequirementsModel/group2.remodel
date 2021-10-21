@@ -1,2 +1,348 @@
-UseCaseModel GROUP2 {Service GROUP2System {} Service ThirdPartyServices {}}
-DomainModel GROUP2 {}
+UseCaseModel GROUP2 {
+
+	UC::chooseTopic definedBySSD(ChooseTopicSSD) relatedService(ChooseTopicService)
+	UC::addTopic definedBySSD(AddTopicSSD) relatedService(AddTopicService)
+	UC::uploadFile definedBySSD(UploadFileSSD) relatedService(UploadFileService)
+	UC::viewFile definedBySSD(ViewFileSSD) relatedService(ViewFileService)
+	UC::giveComment definedBySSD(GiveCommentSSD) relatedService(GiveCommentService)
+	UC::modifyFile definedBySSD(ModifyFileSSD) relatedService(ModifyFileService)
+
+	Actor Student {
+		chooseTopic
+		uploadFile
+		modifyFile
+	}
+
+	Actor Teacher {
+		addTopic
+		viewFile
+		giveComment
+	}
+
+	Interaction ChooseTopicSSD {
+
+		[Participants: Student ChooseTopicService]
+
+		CallMessage::ChooseTopicSSDCallMessage1(getAllTopics ChooseTopicSSDCallMessage1SendingEnd -> ChooseTopicSSDExecution1StartEnd)
+		ReturnMessage::ChooseTopicSSDCallMessage1Return(ChooseTopicSSDExecution1FinishEnd -> ChooseTopicSSDCallMessage1ReturnReceivingEnd ChooseTopicSSDCallMessage1)
+		CallMessage::ChooseTopicSSDCallMessage3(chooseOneTopic ChooseTopicSSDCallMessage3SendingEnd -> ChooseTopicSSDExecution2StartEnd)
+		ReturnMessage::ChooseTopicSSDCallMessage3Return(ChooseTopicSSDExecution2FinishEnd -> ChooseTopicSSDCallMessage3ReturnReceivingEnd ChooseTopicSSDCallMessage3)
+
+		Execution::ChooseTopicSSDExecution1(ChooseTopicService ChooseTopicSSDExecution1StartEnd ChooseTopicSSDExecution1FinishEnd)
+		Execution::ChooseTopicSSDExecution2(ChooseTopicService ChooseTopicSSDExecution2StartEnd ChooseTopicSSDExecution2FinishEnd)
+
+		MessageEnd::ChooseTopicSSDCallMessage1SendingEnd(Student ChooseTopicSSDCallMessage1)
+		ExecutionEnd::ChooseTopicSSDExecution1StartEnd(ChooseTopicService ChooseTopicSSDExecution1)
+		ExecutionEnd::ChooseTopicSSDExecution1FinishEnd(ChooseTopicService ChooseTopicSSDExecution1)
+		MessageEnd::ChooseTopicSSDCallMessage1ReturnReceivingEnd(Student ChooseTopicSSDCallMessage1Return)
+		MessageEnd::ChooseTopicSSDCallMessage3SendingEnd(Student ChooseTopicSSDCallMessage3)
+		ExecutionEnd::ChooseTopicSSDExecution2StartEnd(ChooseTopicService ChooseTopicSSDExecution2)
+		ExecutionEnd::ChooseTopicSSDExecution2FinishEnd(ChooseTopicService ChooseTopicSSDExecution2)
+		MessageEnd::ChooseTopicSSDCallMessage3ReturnReceivingEnd(Student ChooseTopicSSDCallMessage3Return)
+
+	}
+
+	Interaction AddTopicSSD {
+
+		[Participants: Teacher AddTopicService]
+
+		CallMessage::AddTopicSSDCallMessage1(addTopic AddTopicSSDCallMessage1SendingEnd -> AddTopicSSDExecution1StartEnd)
+		ReturnMessage::AddTopicSSDCallMessage1Return(AddTopicSSDExecution1FinishEnd -> AddTopicSSDCallMessage1ReturnReceivingEnd AddTopicSSDCallMessage1)
+
+		Execution::AddTopicSSDExecution1(AddTopicService AddTopicSSDExecution1StartEnd AddTopicSSDExecution1FinishEnd)
+
+		MessageEnd::AddTopicSSDCallMessage1SendingEnd(Teacher AddTopicSSDCallMessage1)
+		ExecutionEnd::AddTopicSSDExecution1StartEnd(AddTopicService AddTopicSSDExecution1)
+		ExecutionEnd::AddTopicSSDExecution1FinishEnd(AddTopicService AddTopicSSDExecution1)
+		MessageEnd::AddTopicSSDCallMessage1ReturnReceivingEnd(Teacher AddTopicSSDCallMessage1Return)
+
+	}
+
+	Interaction UploadFileSSD {
+
+		[Participants: Student UploadFileService]
+
+		CallMessage::UploadFileSSDCallMessage1(enterPage UploadFileSSDCallMessage1SendingEnd -> UploadFileSSDExecution1StartEnd)
+		ReturnMessage::UploadFileSSDCallMessage1Return(UploadFileSSDExecution1FinishEnd -> UploadFileSSDCallMessage1ReturnReceivingEnd UploadFileSSDCallMessage1)
+		CallMessage::UploadFileSSDCallMessage3(uploadFile UploadFileSSDCallMessage3SendingEnd -> UploadFileSSDExecution2StartEnd)
+		ReturnMessage::UploadFileSSDCallMessage3Return(UploadFileSSDExecution2FinishEnd -> UploadFileSSDCallMessage3ReturnReceivingEnd UploadFileSSDCallMessage3)
+
+		Execution::UploadFileSSDExecution1(UploadFileService UploadFileSSDExecution1StartEnd UploadFileSSDExecution1FinishEnd)
+		Execution::UploadFileSSDExecution2(UploadFileService UploadFileSSDExecution2StartEnd UploadFileSSDExecution2FinishEnd)
+
+		MessageEnd::UploadFileSSDCallMessage1SendingEnd(Student UploadFileSSDCallMessage1)
+		ExecutionEnd::UploadFileSSDExecution1StartEnd(UploadFileService UploadFileSSDExecution1)
+		ExecutionEnd::UploadFileSSDExecution1FinishEnd(UploadFileService UploadFileSSDExecution1)
+		MessageEnd::UploadFileSSDCallMessage1ReturnReceivingEnd(Student UploadFileSSDCallMessage1Return)
+		MessageEnd::UploadFileSSDCallMessage3SendingEnd(Student UploadFileSSDCallMessage3)
+		ExecutionEnd::UploadFileSSDExecution2StartEnd(UploadFileService UploadFileSSDExecution2)
+		ExecutionEnd::UploadFileSSDExecution2FinishEnd(UploadFileService UploadFileSSDExecution2)
+		MessageEnd::UploadFileSSDCallMessage3ReturnReceivingEnd(Student UploadFileSSDCallMessage3Return)
+
+	}
+
+	Interaction ViewFileSSD {
+
+		[Participants: Teacher ViewFileService]
+
+		CallMessage::ViewFileSSDCallMessage1(enterPage ViewFileSSDCallMessage1SendingEnd -> ViewFileSSDExecution1StartEnd)
+		ReturnMessage::ViewFileSSDCallMessage1Return(ViewFileSSDExecution1FinishEnd -> ViewFileSSDCallMessage1ReturnReceivingEnd ViewFileSSDCallMessage1)
+		CallMessage::ViewFileSSDCallMessage3(downloadFile ViewFileSSDCallMessage3SendingEnd -> ViewFileSSDExecution2StartEnd)
+		ReturnMessage::ViewFileSSDCallMessage3Return(ViewFileSSDExecution2FinishEnd -> ViewFileSSDCallMessage3ReturnReceivingEnd ViewFileSSDCallMessage3)
+		CallMessage::ViewFileSSDCallMessage5(viewFile ViewFileSSDCallMessage5SendingEnd -> ViewFileSSDExecution3StartEnd)
+		ReturnMessage::ViewFileSSDCallMessage5Return(ViewFileSSDExecution3FinishEnd -> ViewFileSSDCallMessage5ReturnReceivingEnd ViewFileSSDCallMessage5)
+
+		Execution::ViewFileSSDExecution1(ViewFileService ViewFileSSDExecution1StartEnd ViewFileSSDExecution1FinishEnd)
+		Execution::ViewFileSSDExecution2(ViewFileService ViewFileSSDExecution2StartEnd ViewFileSSDExecution2FinishEnd)
+		Execution::ViewFileSSDExecution3(ViewFileService ViewFileSSDExecution3StartEnd ViewFileSSDExecution3FinishEnd)
+
+		MessageEnd::ViewFileSSDCallMessage1SendingEnd(Teacher ViewFileSSDCallMessage1)
+		ExecutionEnd::ViewFileSSDExecution1StartEnd(ViewFileService ViewFileSSDExecution1)
+		ExecutionEnd::ViewFileSSDExecution1FinishEnd(ViewFileService ViewFileSSDExecution1)
+		MessageEnd::ViewFileSSDCallMessage1ReturnReceivingEnd(Teacher ViewFileSSDCallMessage1Return)
+		MessageEnd::ViewFileSSDCallMessage3SendingEnd(Teacher ViewFileSSDCallMessage3)
+		ExecutionEnd::ViewFileSSDExecution2StartEnd(ViewFileService ViewFileSSDExecution2)
+		ExecutionEnd::ViewFileSSDExecution2FinishEnd(ViewFileService ViewFileSSDExecution2)
+		MessageEnd::ViewFileSSDCallMessage3ReturnReceivingEnd(Teacher ViewFileSSDCallMessage3Return)
+		MessageEnd::ViewFileSSDCallMessage5SendingEnd(Teacher ViewFileSSDCallMessage5)
+		ExecutionEnd::ViewFileSSDExecution3StartEnd(ViewFileService ViewFileSSDExecution3)
+		ExecutionEnd::ViewFileSSDExecution3FinishEnd(ViewFileService ViewFileSSDExecution3)
+		MessageEnd::ViewFileSSDCallMessage5ReturnReceivingEnd(Teacher ViewFileSSDCallMessage5Return)
+
+	}
+
+	Interaction GiveCommentSSD {
+
+		[Participants: Teacher GiveCommentService]
+
+		CallMessage::GiveCommentSSDCallMessage1(getPage GiveCommentSSDCallMessage1SendingEnd -> GiveCommentSSDExecution1StartEnd)
+		ReturnMessage::GiveCommentSSDCallMessage1Return(GiveCommentSSDExecution1FinishEnd -> GiveCommentSSDCallMessage1ReturnReceivingEnd GiveCommentSSDCallMessage1)
+		CallMessage::GiveCommentSSDCallMessage3(giveComment GiveCommentSSDCallMessage3SendingEnd -> GiveCommentSSDExecution2StartEnd)
+		ReturnMessage::GiveCommentSSDCallMessage3Return(GiveCommentSSDExecution2FinishEnd -> GiveCommentSSDCallMessage3ReturnReceivingEnd GiveCommentSSDCallMessage3)
+
+		Execution::GiveCommentSSDExecution1(GiveCommentService GiveCommentSSDExecution1StartEnd GiveCommentSSDExecution1FinishEnd)
+		Execution::GiveCommentSSDExecution2(GiveCommentService GiveCommentSSDExecution2StartEnd GiveCommentSSDExecution2FinishEnd)
+
+		MessageEnd::GiveCommentSSDCallMessage1SendingEnd(Teacher GiveCommentSSDCallMessage1)
+		ExecutionEnd::GiveCommentSSDExecution1StartEnd(GiveCommentService GiveCommentSSDExecution1)
+		ExecutionEnd::GiveCommentSSDExecution1FinishEnd(GiveCommentService GiveCommentSSDExecution1)
+		MessageEnd::GiveCommentSSDCallMessage1ReturnReceivingEnd(Teacher GiveCommentSSDCallMessage1Return)
+		MessageEnd::GiveCommentSSDCallMessage3SendingEnd(Teacher GiveCommentSSDCallMessage3)
+		ExecutionEnd::GiveCommentSSDExecution2StartEnd(GiveCommentService GiveCommentSSDExecution2)
+		ExecutionEnd::GiveCommentSSDExecution2FinishEnd(GiveCommentService GiveCommentSSDExecution2)
+		MessageEnd::GiveCommentSSDCallMessage3ReturnReceivingEnd(Teacher GiveCommentSSDCallMessage3Return)
+
+	}
+
+	Interaction ModifyFileSSD {
+
+		[Participants: Student ModifyFileService]
+
+		CallMessage::ModifyFileSSDCallMessage1(joinPage ModifyFileSSDCallMessage1SendingEnd -> ModifyFileSSDExecution1StartEnd)
+		ReturnMessage::ModifyFileSSDCallMessage1Return(ModifyFileSSDExecution1FinishEnd -> ModifyFileSSDCallMessage1ReturnReceivingEnd ModifyFileSSDCallMessage1)
+		CallMessage::ModifyFileSSDCallMessage3(getComment ModifyFileSSDCallMessage3SendingEnd -> ModifyFileSSDExecution2StartEnd)
+		ReturnMessage::ModifyFileSSDCallMessage3Return(ModifyFileSSDExecution2FinishEnd -> ModifyFileSSDCallMessage3ReturnReceivingEnd ModifyFileSSDCallMessage3)
+		CallMessage::ModifyFileSSDCallMessage5(reUploadFile ModifyFileSSDCallMessage5SendingEnd -> ModifyFileSSDExecution3StartEnd)
+		ReturnMessage::ModifyFileSSDCallMessage5Return(ModifyFileSSDExecution3FinishEnd -> ModifyFileSSDCallMessage5ReturnReceivingEnd ModifyFileSSDCallMessage5)
+
+		Execution::ModifyFileSSDExecution1(ModifyFileService ModifyFileSSDExecution1StartEnd ModifyFileSSDExecution1FinishEnd)
+		Execution::ModifyFileSSDExecution2(ModifyFileService ModifyFileSSDExecution2StartEnd ModifyFileSSDExecution2FinishEnd)
+		Execution::ModifyFileSSDExecution3(ModifyFileService ModifyFileSSDExecution3StartEnd ModifyFileSSDExecution3FinishEnd)
+
+		MessageEnd::ModifyFileSSDCallMessage1SendingEnd(Student ModifyFileSSDCallMessage1)
+		ExecutionEnd::ModifyFileSSDExecution1StartEnd(ModifyFileService ModifyFileSSDExecution1)
+		ExecutionEnd::ModifyFileSSDExecution1FinishEnd(ModifyFileService ModifyFileSSDExecution1)
+		MessageEnd::ModifyFileSSDCallMessage1ReturnReceivingEnd(Student ModifyFileSSDCallMessage1Return)
+		MessageEnd::ModifyFileSSDCallMessage3SendingEnd(Student ModifyFileSSDCallMessage3)
+		ExecutionEnd::ModifyFileSSDExecution2StartEnd(ModifyFileService ModifyFileSSDExecution2)
+		ExecutionEnd::ModifyFileSSDExecution2FinishEnd(ModifyFileService ModifyFileSSDExecution2)
+		MessageEnd::ModifyFileSSDCallMessage3ReturnReceivingEnd(Student ModifyFileSSDCallMessage3Return)
+		MessageEnd::ModifyFileSSDCallMessage5SendingEnd(Student ModifyFileSSDCallMessage5)
+		ExecutionEnd::ModifyFileSSDExecution3StartEnd(ModifyFileService ModifyFileSSDExecution3)
+		ExecutionEnd::ModifyFileSSDExecution3FinishEnd(ModifyFileService ModifyFileSSDExecution3)
+		MessageEnd::ModifyFileSSDCallMessage5ReturnReceivingEnd(Student ModifyFileSSDCallMessage5Return)
+
+	}
+
+	Service GROUP2System {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service ChooseTopicService {
+
+		[Operation]
+		getAllTopics(userId)
+		chooseOneTopic(topicId)
+
+	}
+
+	Service AddTopicService {
+
+		[Operation]
+		addTopic(topic)
+
+	}
+
+	Service UploadFileService {
+
+		[Operation]
+		enterPage(pageType)
+		uploadFile(file, studentId, fileType)
+
+	}
+
+	Service ViewFileService {
+
+		[Operation]
+		enterPage(pageType)
+		downloadFile(fileId)
+		viewFile(fileStream)
+
+	}
+
+	Service GiveCommentService {
+
+		[Operation]
+		enterPage(pageType)
+		getPage(pageType)
+		giveComment(comment, fileId)
+
+	}
+
+	Service ModifyFileService {
+
+		[Operation]
+		joinPage(pageType)
+		getComment(fileId)
+		reUploadFile(file)
+
+	}
+
+	Contract ChooseTopicService::getAllTopics(teacherID :Integer) : Topic {
+
+		definition:
+			topics:Topic = Topic.allInstance()->any(t:Topic | t.UserId = teacherID)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(topics.size() = 0)
+			then
+				self.topics = null and
+				result = false
+			else
+				self.topics = topic and
+				result = true
+			endif
+
+	}
+
+	Contract ChooseTopicService::chooseOneTopic(topicID :Integer, studentID :Integer) : Boolean {
+
+		definition:
+		student:User = User.allInstance()->any(user:User | user.UserId = studentID)
+
+		topic:Topic = Topic.allInstance()->any(t:Topic | t.TopicId = topicID)
+		
+		precondition:
+			self.topics.size() > 0
+
+		postcondition:
+			if
+				(student.oclIsUndefined() = false and
+					topic.oclIsUndefined() = false
+				)
+			then
+				student.chosenTopic = topic and
+				result = true
+			else
+				result = false
+			endif
+
+	}
+
+	Contract AddTopicService::addTopic(topic: Topic) : Boolean {
+
+		definition:
+			topic:Topic = Topic.newInstance(topic = topic
+
+			)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(topic.oclIsUndefined() = true)
+			then
+				topic.save()
+				result = true
+			else
+				result = false
+			endif
+
+	}
+
+	Contract UploadFileService::enterPage(PageType: Integer) : Boolean {
+
+		definition:
+			page:Page = Page.newInstance(page.PageType = PageType
+
+			)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(File.oclIsUndefined() = true)
+			then
+				page.enter()
+				result = true
+			else
+				result = false
+			endif
+
+	}
+
+}
+
+DomainModel GROUP2 {
+
+	Entity User {
+		UserId : Integer
+		Username : String
+		Password : String
+		Role : roleType[STUDENT|TEACHER|ADMIN]
+
+		[Refer]
+		FileToUser : File Association
+	}
+
+	Entity Topic {
+		TopicId : Integer
+		TopicName : String
+		TopicMeaning : String
+		TopicTarget : String
+		TopicMethod : String
+		TopicContent : String
+		UserId : Integer
+
+		[Refer]
+		TopictoUser : User Association
+	}
+
+	Entity File {
+		FileId : Integer
+		FileName : String
+		FilePath : String
+		Comment : String
+	}
+
+}
+
