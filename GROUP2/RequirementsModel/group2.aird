@@ -4,7 +4,7 @@
     <semanticResources>group2.remodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_tpJeADJ5Eeyyff4Oj5LiGg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tp3PsDJ5Eeyyff4Oj5LiGg" name="GROUP2 Conceptual Class Diagram" repPath="#_tphRcDJ5Eeyyff4Oj5LiGg" changeId="82015833-d955-484d-8f6a-1cd22756df5b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_tp3PsDJ5Eeyyff4Oj5LiGg" name="GROUP2 Conceptual Class Diagram" repPath="#_tphRcDJ5Eeyyff4Oj5LiGg" changeId="80d186b2-e37c-405a-8501-dd80457dfc56">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
         <target xmi:type="rEMODEL:DomainModel" href="group2.remodel#//@DomainModel"/>
       </ownedRepresentationDescriptors>
@@ -20,19 +20,19 @@
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="group2.remodel#//@UseCaseModel/@interaction.1"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_17a7kDKMEeyv1qRyVAXAKw" name="UploadFileSSD" repPath="#_17aUgDKMEeyv1qRyVAXAKw" changeId="893e43cf-7c49-40f5-8420-23e2f2569a6e">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_17a7kDKMEeyv1qRyVAXAKw" name="UploadFileSSD" repPath="#_17aUgDKMEeyv1qRyVAXAKw" changeId="b1ebf46a-0254-436e-a4bb-cc5fdadc4d28">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="group2.remodel#//@UseCaseModel/@interaction.2"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_OPzshDKNEeyv1qRyVAXAKw" name="ViewFileSSD" repPath="#_OPzFcDKNEeyv1qRyVAXAKw" changeId="10912336-9520-4483-b6ce-a8376aca2660">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_OPzshDKNEeyv1qRyVAXAKw" name="ViewFileSSD" repPath="#_OPzFcDKNEeyv1qRyVAXAKw" changeId="0040f02f-3d7e-4475-97c6-800e858ec737">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="group2.remodel#//@UseCaseModel/@interaction.3"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_7bWdEDKOEeyv1qRyVAXAKw" name="GiveCommentSSD" repPath="#_7bV2ADKOEeyv1qRyVAXAKw" changeId="6e7cc4aa-e0d8-4b66-8ea1-85ffc4524f95">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_7bWdEDKOEeyv1qRyVAXAKw" name="GiveCommentSSD" repPath="#_7bV2ADKOEeyv1qRyVAXAKw" changeId="4e7af668-c72a-4617-a6dd-086baba2869c">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="group2.remodel#//@UseCaseModel/@interaction.4"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_zzSDBDKPEeyv1qRyVAXAKw" name="ModifyFileSSD" repPath="#_zzRb8DKPEeyv1qRyVAXAKw" changeId="9d141e00-6a38-4750-be43-79012ebc08be">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_zzSDBDKPEeyv1qRyVAXAKw" name="ModifyFileSSD" repPath="#_zzRb8DKPEeyv1qRyVAXAKw" changeId="9803201b-a0b6-4e5c-8f52-2c0be6c6a2fc">
         <description xmi:type="description_2:SequenceDiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']"/>
         <target xmi:type="rEMODEL:Interaction" href="group2.remodel#//@UseCaseModel/@interaction.5"/>
       </ownedRepresentationDescriptors>
@@ -155,7 +155,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Yf8YSjKQEeyv1qRyVAXAKw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Yf8YRTKQEeyv1qRyVAXAKw" fontName="Microsoft YaHei UI" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yf8YRjKQEeyv1qRyVAXAKw" x="516" y="312" width="195" height="123"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Yf8YRjKQEeyv1qRyVAXAKw" x="516" y="312" width="195" height="147"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_4rdzUDgIEeyRhaboQWNCtQ" type="2003" element="_4rbXFjgIEeyRhaboQWNCtQ">
           <children xmi:type="notation:Node" xmi:id="_4rdzUzgIEeyRhaboQWNCtQ" type="5007"/>
@@ -205,7 +205,7 @@
           <styles xmi:type="notation:FontStyle" xmi:id="_9CvxUjKREeyv1qRyVAXAKw" fontName="Microsoft YaHei UI" fontHeight="8"/>
           <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9CvxUzKREeyv1qRyVAXAKw" points="[0, 0, -191, -78]$[191, 78, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9CvxWjKREeyv1qRyVAXAKw" id="(1.0,0.6605504587155964)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9CvxWzKREeyv1qRyVAXAKw" id="(0.0,0.1487603305785124)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9CvxWzKREeyv1qRyVAXAKw" id="(0.0,0.12413793103448276)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_nX1S4DgJEeyRhaboQWNCtQ" type="4001" element="_nX0r0DgJEeyRhaboQWNCtQ" source="_v_2ZMDKFEeyv1qRyVAXAKw" target="_4rdzUDgIEeyRhaboQWNCtQ">
           <children xmi:type="notation:Node" xmi:id="_nX1S5DgJEeyRhaboQWNCtQ" type="6001">
@@ -500,23 +500,23 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@containerMappings[name='Entity']/@subNodeMappings[name='EntityAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_nX0r0DgJEeyRhaboQWNCtQ" sourceNode="_v_0kADKFEeyv1qRyVAXAKw" targetNode="_4rbXFjgIEeyRhaboQWNCtQ" endLabel="UsertoUserChooseTopic:1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_nX0r0DgJEeyRhaboQWNCtQ" sourceNode="_v_0kADKFEeyv1qRyVAXAKw" targetNode="_4rbXFjgIEeyRhaboQWNCtQ" endLabel="UsertoUserChooseTopic:*">
       <target xmi:type="rEMODEL:Reference" href="group2.remodel#//@DomainModel/@entity.0/@reference.1"/>
       <semanticElements xmi:type="rEMODEL:Reference" href="group2.remodel#//@DomainModel/@entity.0/@reference.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kLlVKTgQEeyRhaboQWNCtQ" targetArrow="NoDecoration" size="0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.1/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_kLlVKjgQEeyRhaboQWNCtQ" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_kLlVKzgQEeyRhaboQWNCtQ" showIcon="false"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_S_4BoDgREeyMWqsmgyYIfQ" targetArrow="NoDecoration" size="0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.0/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_S_4BoTgREeyMWqsmgyYIfQ" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_S_4BojgREeyMWqsmgyYIfQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_nX0r1zgJEeyRhaboQWNCtQ" sourceNode="_mdOhgDKHEeyv1qRyVAXAKw" targetNode="_4rbXFjgIEeyRhaboQWNCtQ" endLabel="TopictoUserChooseTopic:1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_nX0r1zgJEeyRhaboQWNCtQ" sourceNode="_mdOhgDKHEeyv1qRyVAXAKw" targetNode="_4rbXFjgIEeyRhaboQWNCtQ" endLabel="TopictoUserChooseTopic:*">
       <target xmi:type="rEMODEL:Reference" href="group2.remodel#//@DomainModel/@entity.1/@reference.1"/>
       <semanticElements xmi:type="rEMODEL:Reference" href="group2.remodel#//@DomainModel/@entity.1/@reference.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_kLl8OTgQEeyRhaboQWNCtQ" targetArrow="NoDecoration" size="0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.1/@style"/>
-        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_kLl8OjgQEeyRhaboQWNCtQ" showIcon="false"/>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_kLl8OzgQEeyRhaboQWNCtQ" showIcon="false"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_TYZ2cjgREeyMWqsmgyYIfQ" targetArrow="NoDecoration" size="0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']/@conditionnalStyles.0/@style"/>
+        <beginLabelStyle xmi:type="diagram:BeginLabelStyle" uid="_TYZ2czgREeyMWqsmgyYIfQ" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_TYZ2dDgREeyMWqsmgyYIfQ" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer/@edgeMappings[name='EntityReference']"/>
     </ownedDiagramElements>
@@ -1478,7 +1478,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4I3DgDKMEeyv1qRyVAXAKw" name="enterPage (pageType, fileId)" sourceNode="_17cwxTKMEeyv1qRyVAXAKw" targetNode="_17dX0DKMEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4I3DgDKMEeyv1qRyVAXAKw" name="enterPage (pageType, userId)" sourceNode="_17cwxTKMEeyv1qRyVAXAKw" targetNode="_17dX0DKMEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.2/@messages.0"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.2/@messages.0"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_4I3qkDKMEeyv1qRyVAXAKw" y="163" height="0"/>
@@ -1500,7 +1500,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9V0QkDKMEeyv1qRyVAXAKw" name="uploadFile (file, studentId, fileType)" sourceNode="_17cwxTKMEeyv1qRyVAXAKw" targetNode="_17dX0DKMEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9V0QkDKMEeyv1qRyVAXAKw" name="uploadFile (fileName, fileType, studentId)" sourceNode="_17cwxTKMEeyv1qRyVAXAKw" targetNode="_17dX0DKMEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.2/@messages.2"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.2/@messages.2"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_9V0QlTKMEeyv1qRyVAXAKw" y="304" height="0"/>
@@ -1772,7 +1772,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Qd_bUDKNEeyv1qRyVAXAKw" name="enterPage (pageType, file)" sourceNode="_OP1hsDKNEeyv1qRyVAXAKw" targetNode="_OP1hszKNEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Qd_bUDKNEeyv1qRyVAXAKw" name="enterPage (pageType, userId)" sourceNode="_OP1hsDKNEeyv1qRyVAXAKw" targetNode="_OP1hszKNEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.3/@messages.0"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.3/@messages.0"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_Qd_bVTKNEeyv1qRyVAXAKw" y="158" height="0"/>
@@ -1794,7 +1794,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SnCyhDKNEeyv1qRyVAXAKw" name="downloadFile (fileId)" sourceNode="_OP1hsDKNEeyv1qRyVAXAKw" targetNode="_OP1hszKNEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SnCyhDKNEeyv1qRyVAXAKw" name="getFile (fileId)" sourceNode="_OP1hsDKNEeyv1qRyVAXAKw" targetNode="_OP1hszKNEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.3/@messages.2"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.3/@messages.2"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_SnCyiTKNEeyv1qRyVAXAKw" y="290" height="0"/>
@@ -1816,7 +1816,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_bhwDuDKNEeyv1qRyVAXAKw" name="viewFile (fileStream)" sourceNode="_OP1hsDKNEeyv1qRyVAXAKw" targetNode="_OP1hszKNEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_bhwDuDKNEeyv1qRyVAXAKw" name="viewFile (file)" sourceNode="_OP1hsDKNEeyv1qRyVAXAKw" targetNode="_OP1hszKNEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.3/@messages.4"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.3/@messages.4"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_bhwDvTKNEeyv1qRyVAXAKw" y="410" height="0"/>
@@ -2036,7 +2036,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iyCIgDKPEeyv1qRyVAXAKw" name="getPage (pageType)" sourceNode="_7baHdjKOEeyv1qRyVAXAKw" targetNode="_7baHeTKOEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iyCIgDKPEeyv1qRyVAXAKw" name="enterPage (pageType, userId)" sourceNode="_7baHdjKOEeyv1qRyVAXAKw" targetNode="_7baHeTKOEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.4/@messages.0"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.4/@messages.0"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_iyCIhTKPEeyv1qRyVAXAKw" y="194" height="0"/>
@@ -2330,7 +2330,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:InstanceRoleMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@nodeMappings[name='Participant']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_1dqhMDKPEeyv1qRyVAXAKw" name="joinPage (pageType)" sourceNode="_zzUfQTKPEeyv1qRyVAXAKw" targetNode="_zzUfRDKPEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_1dqhMDKPEeyv1qRyVAXAKw" name="enterPage (pageType, userId)" sourceNode="_zzUfQTKPEeyv1qRyVAXAKw" targetNode="_zzUfRDKPEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.5/@messages.0"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.5/@messages.0"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_1drIQjKPEeyv1qRyVAXAKw" y="154" height="0"/>
@@ -2374,7 +2374,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_2:ReturnMessageMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='SequenceDiagram']/@defaultLayer/@edgeMappings[name='ReturnMessage']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_CCcQaDKQEeyv1qRyVAXAKw" name="reUploadFile (file)" sourceNode="_zzUfQTKPEeyv1qRyVAXAKw" targetNode="_zzUfRDKPEeyv1qRyVAXAKw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_CCcQaDKQEeyv1qRyVAXAKw" name="uploadFile (fileName, fileType, studentId)" sourceNode="_zzUfQTKPEeyv1qRyVAXAKw" targetNode="_zzUfRDKPEeyv1qRyVAXAKw">
       <target xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.5/@messages.4"/>
       <semanticElements xmi:type="rEMODEL:CallMessage" href="group2.remodel#//@UseCaseModel/@interaction.5/@messages.4"/>
       <graphicalFilters xmi:type="diagram:AbsoluteBoundsFilter" uid="_CCcQbTKQEeyv1qRyVAXAKw" y="399" height="0"/>

@@ -87,7 +87,7 @@ UseCaseModel GROUP2 {
 
 		CallMessage::ViewFileSSDCallMessage1(enterPage ViewFileSSDCallMessage1SendingEnd -> ViewFileSSDExecution1StartEnd)
 		ReturnMessage::ViewFileSSDCallMessage1Return(ViewFileSSDExecution1FinishEnd -> ViewFileSSDCallMessage1ReturnReceivingEnd ViewFileSSDCallMessage1)
-		CallMessage::ViewFileSSDCallMessage3(downloadFile ViewFileSSDCallMessage3SendingEnd -> ViewFileSSDExecution2StartEnd)
+		CallMessage::ViewFileSSDCallMessage3(getFile ViewFileSSDCallMessage3SendingEnd -> ViewFileSSDExecution2StartEnd)
 		ReturnMessage::ViewFileSSDCallMessage3Return(ViewFileSSDExecution2FinishEnd -> ViewFileSSDCallMessage3ReturnReceivingEnd ViewFileSSDCallMessage3)
 		CallMessage::ViewFileSSDCallMessage5(viewFile ViewFileSSDCallMessage5SendingEnd -> ViewFileSSDExecution3StartEnd)
 		ReturnMessage::ViewFileSSDCallMessage5Return(ViewFileSSDExecution3FinishEnd -> ViewFileSSDCallMessage5ReturnReceivingEnd ViewFileSSDCallMessage5)
@@ -199,7 +199,7 @@ UseCaseModel GROUP2 {
 
 		[Operation]
 		enterPage(pageType, userId)
-		downloadFile(fileId)
+		getFile(fileId)
 		viewFile(file)
 
 	}
@@ -330,7 +330,7 @@ UseCaseModel GROUP2 {
 			result = DownloadPageHTML
 	}
 
-	Contract ViewFileService::downloadFile(fileId: Integer) : File {
+	Contract ViewFileService::getFile(fileId: Integer) : File {
 
 		definition:
 			file:File = File.allInstance()->any(f:File | f.FileId = fileId)
@@ -445,7 +445,7 @@ DomainModel GROUP2 {
 
 		[Refer]
 		FileToUser : File Association
-		UsertoUserChooseTopic : UserChooseTopic Association
+		UsertoUserChooseTopic : UserChooseTopic* Association
 	}
 
 	Entity Topic {
@@ -459,7 +459,7 @@ DomainModel GROUP2 {
 
 		[Refer]
 		TopictoUser : User Association
-		TopictoUserChooseTopic : UserChooseTopic Association
+		TopictoUserChooseTopic : UserChooseTopic* Association
 	}
 
 	Entity File {
