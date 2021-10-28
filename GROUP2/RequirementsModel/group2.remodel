@@ -115,7 +115,7 @@ UseCaseModel GROUP2 {
 
 		[Participants: Teacher GiveCommentService]
 
-		CallMessage::GiveCommentSSDCallMessage1(getPage GiveCommentSSDCallMessage1SendingEnd -> GiveCommentSSDExecution1StartEnd)
+		CallMessage::GiveCommentSSDCallMessage1(enterPage GiveCommentSSDCallMessage1SendingEnd -> GiveCommentSSDExecution1StartEnd)
 		ReturnMessage::GiveCommentSSDCallMessage1Return(GiveCommentSSDExecution1FinishEnd -> GiveCommentSSDCallMessage1ReturnReceivingEnd GiveCommentSSDCallMessage1)
 		CallMessage::GiveCommentSSDCallMessage3(giveComment GiveCommentSSDCallMessage3SendingEnd -> GiveCommentSSDExecution2StartEnd)
 		ReturnMessage::GiveCommentSSDCallMessage3Return(GiveCommentSSDExecution2FinishEnd -> GiveCommentSSDCallMessage3ReturnReceivingEnd GiveCommentSSDCallMessage3)
@@ -138,11 +138,11 @@ UseCaseModel GROUP2 {
 
 		[Participants: Student ModifyFileService]
 
-		CallMessage::ModifyFileSSDCallMessage1(joinPage ModifyFileSSDCallMessage1SendingEnd -> ModifyFileSSDExecution1StartEnd)
+		CallMessage::ModifyFileSSDCallMessage1(enterPage ModifyFileSSDCallMessage1SendingEnd -> ModifyFileSSDExecution1StartEnd)
 		ReturnMessage::ModifyFileSSDCallMessage1Return(ModifyFileSSDExecution1FinishEnd -> ModifyFileSSDCallMessage1ReturnReceivingEnd ModifyFileSSDCallMessage1)
 		CallMessage::ModifyFileSSDCallMessage3(getComment ModifyFileSSDCallMessage3SendingEnd -> ModifyFileSSDExecution2StartEnd)
 		ReturnMessage::ModifyFileSSDCallMessage3Return(ModifyFileSSDExecution2FinishEnd -> ModifyFileSSDCallMessage3ReturnReceivingEnd ModifyFileSSDCallMessage3)
-		CallMessage::ModifyFileSSDCallMessage5(reUploadFile ModifyFileSSDCallMessage5SendingEnd -> ModifyFileSSDExecution3StartEnd)
+		CallMessage::ModifyFileSSDCallMessage5(uploadFile ModifyFileSSDCallMessage5SendingEnd -> ModifyFileSSDExecution3StartEnd)
 		ReturnMessage::ModifyFileSSDCallMessage5Return(ModifyFileSSDExecution3FinishEnd -> ModifyFileSSDCallMessage5ReturnReceivingEnd ModifyFileSSDCallMessage5)
 
 		Execution::ModifyFileSSDExecution1(ModifyFileService ModifyFileSSDExecution1StartEnd ModifyFileSSDExecution1FinishEnd)
@@ -175,40 +175,39 @@ UseCaseModel GROUP2 {
 	Service ChooseTopicService {
 
 		[Operation]
-		getAllTopics(userId)
-		chooseOneTopic(topicId)
+		getAllTopics(teacherId)
+		chooseOneTopic(topicId, studentId)
 
 	}
 
 	Service AddTopicService {
 
 		[Operation]
-		addTopic(topic)
+		addTopic(topic, teacherId)
 
 	}
 
 	Service UploadFileService {
 
 		[Operation]
-		enterPage(pageType)
-		uploadFile(file, studentId, fileType)
+		enterPage(pageType, userId)
+		uploadFile(fileName, fileType, studentId)
 
 	}
 
 	Service ViewFileService {
 
 		[Operation]
-		enterPage(pageType)
+		enterPage(pageType, userId)
 		downloadFile(fileId)
-		viewFile(fileStream)
+		viewFile(file)
 
 	}
 
 	Service GiveCommentService {
 
 		[Operation]
-		enterPage(pageType)
-		getPage(pageType)
+		enterPage(pageType, userId)
 		giveComment(comment, fileId)
 
 	}
@@ -216,9 +215,9 @@ UseCaseModel GROUP2 {
 	Service ModifyFileService {
 
 		[Operation]
-		joinPage(pageType)
+		enterPage(pageType, userId)
 		getComment(fileId)
-		reUploadFile(file)
+		uploadFile(fileName, fileType, studentId)
 
 	}
 
@@ -233,11 +232,11 @@ UseCaseModel GROUP2 {
 			if
 				(topics.size() = 0)
 			then
-				self.topics = null and
-				result = false
+				topics = null and
+				result = topics
 			else
 				self.topics = topic and
-				result = true
+				result = topics
 			endif
 
 	}
@@ -249,64 +248,189 @@ UseCaseModel GROUP2 {
 			topic:Topic = Topic.allInstance()->any(t:Topic | t.TopicId = topicId)
 
 		precondition:
-			self.topics.size() > 0
+			topic.oclIsUndefined() = false and
+			student.oclIsUndefined() = false
 
 		postcondition:
-			if
-				(student.oclIsUndefined() = false and
-					topic.oclIsUndefined() = false
-				)
-			then
-				student.chosenTopic = topic and
-				result = true
-			else
-				result = false
-			endif
+			let uct:UserChooseTopic in
+			uct.oclIsNew() and
+			uct.UserId = studentId and
+			uct.TopicId = topicId and
+			UserChooseTopic.allInstance()->includes(uct) and
+			result = true
+	}
+
+	Contract AddTopicService::addTopic(topic: Topic, teacherId: Integer) : Boolean {
+
+		definition:
+			teacher:User = User.allInstance()->any(u:User | u.UserId = teacherId),
+			get_topic:Topic = Topic.allInstance()->any(t:Topic | t.TopicId = topic.TopicId)
+
+		precondition:
+			teacher.oclIsUndefined() = false and
+			topic.oclIsUndefined() = false and
+			get_topic = null
+
+		postcondition:
+			let t:Topic in
+			t.oclIsNew() and
+			t = topic and
+			Topic.allInstance()->includes(t) and
+			result = true
+	}
+
+	Contract UploadFileService::enterPage(pageType: Integer, userId: Integer) : String {
+
+		definition:
+			user:User = User.allInstance()->any(u:User | u.UserId = userId)
+
+		precondition:
+			pageType > 0 and
+			pageType < 4 and
+			user.oclIsUndefined() = false and
+			user.Role = STUDENT
+
+		postcondition:
+			result = UploadPageHTML
+	}
+
+	Contract UploadFileService::uploadFile(fileName: String, fileType: Integer, studentId: Integer) : Boolean {
+
+		definition:
+			student:User = User.allInstance()->any(u:User|u.UserId = studentId)
+
+		precondition:
+			student.oclIsUndefined() = false and
+			fileType > 0 and
+			fileType < 4 and
+			fileName.size() > 0
+
+		postcondition:
+			let file:File in
+			file.oclIsNew() and
+			file.FileName = fileName and
+			file.UserId = studentId and
+			file.FileType = fileType and
+			File.allInstance()->includes(file) and
+			result = true
+	}
+
+	Contract ViewFileService::enterPage(pageType: Integer, userId: Integer) : Boolean {
+
+		definition:
+			user:User = User.allInstance()->any(u:User | u.UserId = userId)
+
+		precondition:
+			pageType > 0 and
+			pageType < 4 and
+			user.oclIsUndefined() = false and
+			user.Role = TEACHER
+
+		postcondition:
+			result = DownloadPageHTML
+	}
+
+	Contract ViewFileService::downloadFile(fileId: Integer) : File {
+
+		definition:
+			file:File = File.allInstance()->any(f:File | f.FileId = fileId)
+
+		precondition:
+			file.oclIsUndefined() = false
+
+		postcondition:
+			result = file
+	}
+
+	Contract ViewFileService::viewFile(file: File) : String {
+
+		precondition:
+			file.oclIsUndefined() = false and
+			file.FilePath.oclIsUndefined() = false
+
+		postcondition:
+			fileContent = DownloadFile(file.FilePath) and
+			fileHtml = ParseFileToHtml(fileContent) and
+			result = fileHtml
+	}
+
+	Contract GiveCommentService::enterPage(pageType: Integer, userId: Integer) : Boolean {
+
+		definition:
+			user:User = User.allInstance()->any(u:User | u.UserId = userId)
+
+		precondition:
+			pageType > 0 and
+			pageType < 4 and
+			user.oclIsUndefined() = false and
+			user.Role = TEACHER
+
+		postcondition:
+			result = CommentPageHTML
 
 	}
 
-	Contract AddTopicService::addTopic(topic: Topic) : Boolean {
+	Contract GiveCommentService::giveComment(comment: String, fileId: Integer) : Boolean {
 
 		definition:
-			topic:Topic = Topic.newInstance(topic = topic
-
-			)
+			file:File = File.allInstance()->any(f:File | f.FileId = fileId)
 
 		precondition:
-			true
+			file.oclIsUndefined() = false and
+			comment.oclIsUndefined() = false
 
 		postcondition:
-			if
-				(topic.oclIsUndefined() = true)
-			then
-				topic.save()
-				result = true
-			else
-				result = false
-			endif
+			file.Comment = comment and
+			result = true
+	}
+
+	Contract ModifyFileService::enterPage(pageType: Integer, userId: Integer) : Boolean {
+
+		definition:
+			user:User = User.allInstance()->any(u:User | u.UserId = userId)
+
+		precondition:
+			pageType > 0 and
+			pageType < 4 and
+			user.oclIsUndefined() = false and
+			user.Role = STUDENT
+
+		postcondition:
+			result = FilePageHTML
 
 	}
 
-	Contract UploadFileService::enterPage(PageType: Integer) : Boolean {
+	Contract ModifyFileService::getComment(fileId: Integer) : String {
 
 		definition:
-			page:Page = Page.newInstance(page.PageType = PageType
-
-			)
+			file:File = File.allInstance()->any(f:File | f.FileId = fileId)
 
 		precondition:
-			true
+			file.oclIsUndefined() = false
 
 		postcondition:
-			if
-				(File.oclIsUndefined() = true)
-			then
-				page.enter()
-				result = true
-			else
-				result = false
-			endif
+			result = file.comment
+	}
 
+	Contract ModifyFileService::uploadFile(fileName: String, fileType: Integer, studentId: Integer) : Boolean {
+
+		definition:
+			student:User = User.allInstance()->any(u:User|u.UserId = studentId)
+
+		precondition:
+			student.oclIsUndefined() = false and
+			fileType > 0 and
+			fileType < 4 and
+			fileName.size() > 0
+
+		postcondition:
+			let file:File in
+			file.oclIsNew() and
+			file.FileName = fileName and
+			file.UserId = studentId and
+			file.FileType = fileType and
+			File.allInstance()->includes(file) and
+			result = true
 	}
 
 }
@@ -321,6 +445,7 @@ DomainModel GROUP2 {
 
 		[Refer]
 		FileToUser : File Association
+		UsertoUserChooseTopic : UserChooseTopic Association
 	}
 
 	Entity Topic {
@@ -334,6 +459,7 @@ DomainModel GROUP2 {
 
 		[Refer]
 		TopictoUser : User Association
+		TopictoUserChooseTopic : UserChooseTopic Association
 	}
 
 	Entity File {
@@ -341,6 +467,13 @@ DomainModel GROUP2 {
 		FileName : String
 		FilePath : String
 		Comment : String
+		FileType : Integer
+		UserId : Integer
+	}
+
+	Entity UserChooseTopic {
+		UserId : Integer
+		TopicId : Integer
 	}
 
 }
