@@ -222,10 +222,10 @@ UseCaseModel GROUP2 {
 
 	}
 
-	Contract ChooseTopicService::getAllTopics(teacherID :Integer) : Topic {
+	Contract ChooseTopicService::getAllTopics(teacherId :Integer) : Topic {
 
 		definition:
-			topics:Topic = Topic.allInstance()->any(t:Topic | t.UserId = teacherID)
+			topics:Topic = Topic.allInstance()->any(t:Topic | t.UserId = teacherId)
 
 		precondition:
 			true
@@ -242,13 +242,12 @@ UseCaseModel GROUP2 {
 
 	}
 
-	Contract ChooseTopicService::chooseOneTopic(topicID :Integer, studentID :Integer) : Boolean {
+	Contract ChooseTopicService::chooseOneTopic(topicId :Integer, studentId :Integer) : Boolean {
 
 		definition:
-		student:User = User.allInstance()->any(user:User | user.UserId = studentID)
+			student:User = User.allInstance()->any(user:User | user.UserId = studentId),
+			topic:Topic = Topic.allInstance()->any(t:Topic | t.TopicId = topicId)
 
-		topic:Topic = Topic.allInstance()->any(t:Topic | t.TopicId = topicID)
-		
 		precondition:
 			self.topics.size() > 0
 
