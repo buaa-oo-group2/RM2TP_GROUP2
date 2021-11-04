@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="time" nsURI="http://www.example.org/time" nsPrefix="time">
+  <eClassifiers xsi:type="ecore:EClass" name="TimeBase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nature" eType="#//TimeNatureKind"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="currentInstant" lowerBound="1"
+        eType="#//Instant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owningMTB" lowerBound="1"
+        eType="#//MultipleTimeBase" eOpposite="#//MultipleTimeBase/ownedTBs"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instants" lowerBound="1"
+        upperBound="-1" eType="#//Instant" eOpposite="#//Instant/tb"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instant">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tb" lowerBound="1" eType="#//TimeBase"
+        eOpposite="#//TimeBase/instants"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JunctionInstant" eSuperTypes="#//Instant"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DiscreteTimeBase" eSuperTypes="#//TimeBase">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coveringTB" eType="#//TimeBase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimeNatureKind">
+    <eLiterals name="discrete"/>
+    <eLiterals name="dense" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultipleTimeBase">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nestedMTBs" upperBound="-1"
+        eType="#//MultipleTimeBase" eOpposite="#//MultipleTimeBase/parentMTB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentMTB" eType="#//MultipleTimeBase"
+        eOpposite="#//MultipleTimeBase/nestedMTBs"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownedTBs" upperBound="-1"
+        eType="#//TimeBase" eOpposite="#//TimeBase/owningMTB"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tsRelations" upperBound="-1"
+        eType="#//TimeStructureRelation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeStructureRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeBaseRelation" eSuperTypes="#//TimeStructureRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedTBs" lowerBound="2"
+        upperBound="-1" eType="#//TimeBase" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeInstantRelation" eSuperTypes="#//TimeStructureRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedJIs" upperBound="-1"
+        eType="#//JunctionInstant" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CoincidenceRelation" eSuperTypes="#//TimeInstantRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coincidentJIs" lowerBound="2"
+        upperBound="-1" eType="#//JunctionInstant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceRelation" eSuperTypes="#//TimeInstantRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="after" lowerBound="1" eType="#//JunctionInstant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="before" lowerBound="1"
+        eType="#//JunctionInstant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeIntervalMembership" eSuperTypes="#//TimeInstantRelation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="members" upperBound="-1"
+        eType="#//JunctionInstant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeinterval" lowerBound="1"
+        eType="#//TimeInterval"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeInterval">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isLowerOpen" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isUpperOpen" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="upper" lowerBound="1" eType="#//JunctionInstant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lower" lowerBound="1" eType="#//JunctionInstant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base" lowerBound="1" eType="#//TimeBase"/>
+  </eClassifiers>
+</ecore:EPackage>
