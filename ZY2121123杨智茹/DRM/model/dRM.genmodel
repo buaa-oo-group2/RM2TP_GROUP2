@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/DRM/src-gen" creationIcons="false" editDirectory="/DRM.edit/src-gen"
+    editorDirectory="/DRM.editor/src-gen" modelPluginID="DRM" modelName="DRM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" usedGenPackages="#//dRM/Brokering" operationReflection="true"
+    importOrganizing="true">
+  <foreignModel>dRM.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="DRM" disposableProviderFactory="true" ecorePackage="dRM.ecore#/">
+    <nestedGenPackages prefix="NewPackage1" disposableProviderFactory="true" ecorePackage="dRM.ecore#//Brokering">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dRM.ecore#//Brokering/AccessPolicyKind">
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Brokering/AccessPolicyKind/Read"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Brokering/AccessPolicyKind/Write"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Brokering/AccessPolicyKind/ReadWrite"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Brokering/AccessPolicyKind/Undef"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Brokering/AccessPolicyKind/Other"/>
+      </genEnums>
+      <genDataTypes ecoreDataType="dRM.ecore#//Brokering/TypedElement"/>
+      <genDataTypes ecoreDataType="dRM.ecore#//Brokering/BehavioralFeature"/>
+      <genClasses ecoreClass="dRM.ecore#//Brokering/SwResource"/>
+      <genClasses ecoreClass="dRM.ecore#//Brokering/DeviceBroker">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/accessPolicy"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/isBuffered"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/devices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/closeServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/controlServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/openServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/readServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/DeviceBroker/writeServices"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Brokering/MemoryBroker">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/accessPolicy"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/memories"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/memoryBlockAddressElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/memoryBlockSizeElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/lockServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/unlockServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/mapServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Brokering/MemoryBroker/unMapServices"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewPackage2" disposableProviderFactory="true" ecorePackage="dRM.ecore#//Concurrency">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dRM.ecore#//Concurrency/InterruptKind">
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Concurrency/InterruptKind/HardwareInterruption"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Concurrency/InterruptKind/ProcessorDetectedException"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Concurrency/InterruptKind/ProgrammedException"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Concurrency/InterruptKind/Undef"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Concurrency/InterruptKind/Other"/>
+      </genEnums>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/Allocate"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/SwResource"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/NewEClass3"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/EntryPoint">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/EntryPoint/isReentrant"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/EntryPoint/routine"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/SwConcurrentResource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/activationCapacity"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/entryPoints"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/addressSpace"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/periodElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/priorityElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/heapSizeElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/stackSizeElement"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/activateServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/enableConcurrencyServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/resumeServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/suspendServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwConcurrentResource/terminateServices"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/ScheduableResource"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/InterruptResource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/InterruptResource/kind"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/InterruptResource/isMaskable"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/InterruptResource/vectorElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/InterruptResource/maskElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/InterruptResource/routineConnectServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/InterruptResource/routineDisconnectServices"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/SwSchedualbeResource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/isStaticSchedulingFeature"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/isPreemptable"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/scheduler"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/deadlineElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/deadlineTypeElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/timeSliceElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/delayServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/joinServices"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwSchedualbeResource/yieldServices"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/Alarm">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/Alarm/isWatching"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/Alarm/timers"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/SwResource.1"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/NameSpace"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/MemoryPartition">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dRM.ecore#//Concurrency/MemoryPartition/namespace"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/MemoryPartition/concurrentResources"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/MemoryPartition/memorySpaces"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/MemoryPartition/fork"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/MemoryPartition/exit"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/TimerResource"/>
+      <genClasses ecoreClass="dRM.ecore#//Concurrency/SwTimerResource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Concurrency/SwTimerResource/durationElements"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewPackage3" disposableProviderFactory="true" ecorePackage="dRM.ecore#//Resource">
+      <genDataTypes ecoreDataType="dRM.ecore#//Resource/ModelElement.1"/>
+      <genClasses ecoreClass="dRM.ecore#//Resource/Resource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Resource/Resource/maxRIS"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dRM.ecore#//Resource/Resource/neweclass5"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Resource/ResourceManager"/>
+      <genClasses ecoreClass="dRM.ecore#//Resource/SwResource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Resource/SwResource/identifierElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Resource/SwResource/stateElements"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Resource/SwResource/memorySizeFootprint"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference dRM.ecore#//Resource/SwResource/services"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Resource/ResourceServices"/>
+      <genClasses ecoreClass="dRM.ecore#//Resource/ResourceService">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference dRM.ecore#//Resource/ResourceService/parameter"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Resource/ModelElement"/>
+      <genClasses ecoreClass="dRM.ecore#//Resource/Parameter"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NewPackage4" disposableProviderFactory="true" ecorePackage="dRM.ecore#//Interaction">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="dRM.ecore#//Interaction/QueuePolicyKind">
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Interaction/QueuePolicyKind/FIFO"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Interaction/QueuePolicyKind/FILO"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Interaction/QueuePolicyKind/Priority"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Interaction/QueuePolicyKind/Undef"/>
+        <genEnumLiterals ecoreEnumLiteral="dRM.ecore#//Interaction/QueuePolicyKind/Other"/>
+      </genEnums>
+      <genClasses ecoreClass="dRM.ecore#//Interaction/SwResource"/>
+      <genClasses ecoreClass="dRM.ecore#//Interaction/ResourceBroker"/>
+      <genClasses ecoreClass="dRM.ecore#//Interaction/CommunicationEndPoint"/>
+      <genClasses ecoreClass="dRM.ecore#//Interaction/SwInteractionResource">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Interaction/SwInteractionResource/isIntraMemoryPartitionalinteraction"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Interaction/SwInteractionResource/waitingQueuePolicy"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Interaction/SwInteractionResource/waitingQueueCapacity"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute dRM.ecore#//Interaction/SwInteractionResource/waitingPolicyElements"/>
+      </genClasses>
+      <genClasses ecoreClass="dRM.ecore#//Interaction/SwCommunicationResource"/>
+      <genClasses ecoreClass="dRM.ecore#//Interaction/SwSynchronizationResource"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>
