@@ -121,4 +121,25 @@
   <eClassifiers xsi:type="ecore:EClass" name="AllocationEnd" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ApplicationAllocationEnd" eSuperTypes="#//AllocationEnd"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExecutionPlatformAllocationEnd" eSuperTypes="#//AllocationEnd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Allocation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        upperBound="-1" eType="#//ApplicationAllocationEnd.2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        upperBound="-1" eType="#//ExecutionPlatformAllocationEnd.2"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inpliedConstraint" upperBound="-1"
+        eType="#//NFP_Constrain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationAllocationEnd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionPlatformAllocationEnd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Refinement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
+        eType="#//NFP_Constrain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
+        upperBound="-1" eType="#//AllocationEnd.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refined" lowerBound="1"
+        upperBound="-1" eType="#//AllocationEnd.1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllocationEnd" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationAllocationEnd" eSuperTypes="#//AllocationEnd.1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionPlatformAllocationEnd" eSuperTypes="#//AllocationEnd.1"/>
 </ecore:EPackage>
