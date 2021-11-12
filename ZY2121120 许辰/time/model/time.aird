@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_wz_ggD2JEeyNXPgOLYyP1w" selectedViews="_w9dlkD2JEeyNXPgOLYyP1w" version="14.3.1.202003261200">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_wz_ggD2JEeyNXPgOLYyP1w" version="14.5.1.202106111100">
     <semanticResources>time.ecore</semanticResources>
     <semanticResources>time.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_w9dlkD2JEeyNXPgOLYyP1w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_w_p98D2JEeyNXPgOLYyP1w" name="time" repPath="#_w-6XED2JEeyNXPgOLYyP1w" changeId="545f3d35-747c-417b-8aee-e5a712f9a14f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="time.ecore#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_v_rz0EMdEey9BuLpTkMRcQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_wNdKEEMdEey9BuLpTkMRcQ" name="time documentation table" repPath="#_wNVOQEMdEey9BuLpTkMRcQ" changeId="2b0c510c-214f-4427-a4a0-4aec8d13e111">
+        <description xmi:type="description_2:CrossTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']"/>
         <target xmi:type="ecore:EPackage" href="time.ecore#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
@@ -1056,4 +1063,193 @@
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
     <target xmi:type="ecore:EPackage" href="time.ecore#/"/>
   </diagram:DSemanticDiagram>
+  <table:DTable uid="_wNVOQEMdEey9BuLpTkMRcQ" headerColumnWidth="235">
+    <target xmi:type="ecore:EPackage" href="time.ecore#/"/>
+    <lines xmi:type="table:DLine" uid="_wNXqgEMdEey9BuLpTkMRcQ" label="EClass : TimeBase">
+      <target xmi:type="ecore:EClass" href="time.ecore#//TimeBase"/>
+      <lines xmi:type="table:DLine" uid="_wNZfu0MdEey9BuLpTkMRcQ" label="EAttribute : nature">
+        <target xmi:type="ecore:EAttribute" href="time.ecore#//TimeBase/nature"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="time.ecore#//TimeBase/nature"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfvUMdEey9BuLpTkMRcQ" label="EReference : currentInstant">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeBase/currentInstant"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeBase/currentInstant"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfv0MdEey9BuLpTkMRcQ" label="EReference : owningMTB">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeBase/owningMTB"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeBase/owningMTB"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfwUMdEey9BuLpTkMRcQ" label="EReference : instants">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeBase/instants"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeBase/instants"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//TimeBase"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4oUMdEey9BuLpTkMRcQ" label="EClass : Instant">
+      <target xmi:type="ecore:EClass" href="time.ecore#//Instant"/>
+      <lines xmi:type="table:DLine" uid="_wNZfw0MdEey9BuLpTkMRcQ" label="EAttribute : date">
+        <target xmi:type="ecore:EAttribute" href="time.ecore#//Instant/date"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="time.ecore#//Instant/date"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfxUMdEey9BuLpTkMRcQ" label="EReference : tb">
+        <target xmi:type="ecore:EReference" href="time.ecore#//Instant/tb"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//Instant/tb"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//Instant"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4o0MdEey9BuLpTkMRcQ" label="EClass : JunctionInstant">
+      <target xmi:type="ecore:EClass" href="time.ecore#//JunctionInstant"/>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//JunctionInstant"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4pUMdEey9BuLpTkMRcQ" label="EClass : DiscreteTimeBase">
+      <target xmi:type="ecore:EClass" href="time.ecore#//DiscreteTimeBase"/>
+      <lines xmi:type="table:DLine" uid="_wNZfx0MdEey9BuLpTkMRcQ" label="EReference : coveringTB">
+        <target xmi:type="ecore:EReference" href="time.ecore#//DiscreteTimeBase/coveringTB"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//DiscreteTimeBase/coveringTB"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//DiscreteTimeBase"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4p0MdEey9BuLpTkMRcQ" label="EEnum : TimeNatureKind">
+      <target xmi:type="ecore:EEnum" href="time.ecore#//TimeNatureKind"/>
+      <semanticElements xmi:type="ecore:EEnum" href="time.ecore#//TimeNatureKind"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4qUMdEey9BuLpTkMRcQ" label="EClass : MultipleTimeBase">
+      <target xmi:type="ecore:EClass" href="time.ecore#//MultipleTimeBase"/>
+      <lines xmi:type="table:DLine" uid="_wNZfyUMdEey9BuLpTkMRcQ" label="EReference : nestedMTBs">
+        <target xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/nestedMTBs"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/nestedMTBs"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfy0MdEey9BuLpTkMRcQ" label="EReference : parentMTB">
+        <target xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/parentMTB"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/parentMTB"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfzUMdEey9BuLpTkMRcQ" label="EReference : ownedTBs">
+        <target xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/ownedTBs"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/ownedTBs"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNZfz0MdEey9BuLpTkMRcQ" label="EReference : tsRelations">
+        <target xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/tsRelations"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//MultipleTimeBase/tsRelations"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//MultipleTimeBase"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4q0MdEey9BuLpTkMRcQ" label="EClass : TimeStructureRelation">
+      <target xmi:type="ecore:EClass" href="time.ecore#//TimeStructureRelation"/>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//TimeStructureRelation"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNY4rUMdEey9BuLpTkMRcQ" label="EClass : TimeBaseRelation">
+      <target xmi:type="ecore:EClass" href="time.ecore#//TimeBaseRelation"/>
+      <lines xmi:type="table:DLine" uid="_wNZf0UMdEey9BuLpTkMRcQ" label="EReference : relatedTBs">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeBaseRelation/relatedTBs"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeBaseRelation/relatedTBs"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//TimeBaseRelation"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNZfsUMdEey9BuLpTkMRcQ" label="EClass : TimeInstantRelation">
+      <target xmi:type="ecore:EClass" href="time.ecore#//TimeInstantRelation"/>
+      <lines xmi:type="table:DLine" uid="_wNaGwEMdEey9BuLpTkMRcQ" label="EReference : relatedJIs">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeInstantRelation/relatedJIs"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeInstantRelation/relatedJIs"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//TimeInstantRelation"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNZfs0MdEey9BuLpTkMRcQ" label="EClass : CoincidenceRelation">
+      <target xmi:type="ecore:EClass" href="time.ecore#//CoincidenceRelation"/>
+      <lines xmi:type="table:DLine" uid="_wNaGwkMdEey9BuLpTkMRcQ" label="EReference : coincidentJIs">
+        <target xmi:type="ecore:EReference" href="time.ecore#//CoincidenceRelation/coincidentJIs"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//CoincidenceRelation/coincidentJIs"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//CoincidenceRelation"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNZftUMdEey9BuLpTkMRcQ" label="EClass : PrecedenceRelation">
+      <target xmi:type="ecore:EClass" href="time.ecore#//PrecedenceRelation"/>
+      <lines xmi:type="table:DLine" uid="_wNaGxEMdEey9BuLpTkMRcQ" label="EReference : after">
+        <target xmi:type="ecore:EReference" href="time.ecore#//PrecedenceRelation/after"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//PrecedenceRelation/after"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNaGxkMdEey9BuLpTkMRcQ" label="EReference : before">
+        <target xmi:type="ecore:EReference" href="time.ecore#//PrecedenceRelation/before"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//PrecedenceRelation/before"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//PrecedenceRelation"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNZft0MdEey9BuLpTkMRcQ" label="EClass : TimeIntervalMembership">
+      <target xmi:type="ecore:EClass" href="time.ecore#//TimeIntervalMembership"/>
+      <lines xmi:type="table:DLine" uid="_wNaGyEMdEey9BuLpTkMRcQ" label="EReference : members">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeIntervalMembership/members"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeIntervalMembership/members"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNaGykMdEey9BuLpTkMRcQ" label="EReference : timeinterval">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeIntervalMembership/timeinterval"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeIntervalMembership/timeinterval"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//TimeIntervalMembership"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <lines xmi:type="table:DLine" uid="_wNZfuUMdEey9BuLpTkMRcQ" label="EClass : TimeInterval">
+      <target xmi:type="ecore:EClass" href="time.ecore#//TimeInterval"/>
+      <lines xmi:type="table:DLine" uid="_wNaGzEMdEey9BuLpTkMRcQ" label="EAttribute : isLowerOpen">
+        <target xmi:type="ecore:EAttribute" href="time.ecore#//TimeInterval/isLowerOpen"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="time.ecore#//TimeInterval/isLowerOpen"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNaGzkMdEey9BuLpTkMRcQ" label="EAttribute : isUpperOpen">
+        <target xmi:type="ecore:EAttribute" href="time.ecore#//TimeInterval/isUpperOpen"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="time.ecore#//TimeInterval/isUpperOpen"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNaG0EMdEey9BuLpTkMRcQ" label="EReference : upper">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeInterval/upper"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeInterval/upper"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNaG0kMdEey9BuLpTkMRcQ" label="EReference : lower">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeInterval/lower"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeInterval/lower"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <lines xmi:type="table:DLine" uid="_wNaG1EMdEey9BuLpTkMRcQ" label="EReference : base">
+        <target xmi:type="ecore:EReference" href="time.ecore#//TimeInterval/base"/>
+        <semanticElements xmi:type="ecore:EReference" href="time.ecore#//TimeInterval/base"/>
+        <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']/@ownedSubLines[name='Doc%20EStructural%20Features']"/>
+      </lines>
+      <semanticElements xmi:type="ecore:EClass" href="time.ecore#//TimeInterval"/>
+      <originMapping xmi:type="description_2:LineMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedLineMappings[name='Doc%20EClassifiers']"/>
+    </lines>
+    <columns xmi:type="table:DTargetColumn" uid="_wNbU4EMdEey9BuLpTkMRcQ" label="Domain Documentation" width="180">
+      <target xmi:type="ecore:EPackage" href="time.ecore#/"/>
+      <semanticElements xmi:type="ecore:EPackage" href="time.ecore#/"/>
+      <originMapping xmi:type="description_2:ElementColumnMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']/@ownedColumnMappings.0"/>
+    </columns>
+    <description xmi:type="description_2:CrossTableDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Review']/@ownedRepresentations[name='Documentation']"/>
+  </table:DTable>
 </xmi:XMI>
