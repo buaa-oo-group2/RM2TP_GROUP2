@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mARTE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mARTE.presentation.MARTEModelWizardID"
+            name="%_UI_MARTEModelWizard_label"
+            class="mARTE.presentation.MARTEModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MARTEModelFile.gif">
+         <description>%_UI_MARTEModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mARTE -->
+      <editor
+            id="mARTE.presentation.MARTEEditorID"
+            name="%_UI_MARTEEditor_label"
+            icon="icons/full/obj16/MARTEModelFile.gif"
+            extensions="marte"
+            class="mARTE.presentation.MARTEEditor"
+            contributorClass="mARTE.presentation.MARTEActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
