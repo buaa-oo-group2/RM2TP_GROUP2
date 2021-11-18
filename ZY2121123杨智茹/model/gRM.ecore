@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gRM" nsURI="http://www.example.org/gRM" nsPrefix="gRM">
+  <eClassifiers xsi:type="ecore:EClass" name="Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxRIS" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" upperBound="-1"
+        eType="#//ResourceService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceinstance" lowerBound="1"
+        upperBound="-1" eType="#//ResourceInstance" eOpposite="#//ResourceInstance/type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resMult" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="own" upperBound="-1" eType="#//Resource"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceManager" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceService" eSuperTypes="#//Behavior.1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceType" eType="#//ResourceServiceExec"
+        eOpposite="#//ResourceServiceExec/resourceinstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//ModelElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SwResource" eSuperTypes="#//ResourceManager">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifierElements" upperBound="-1"
+        eType="#//ModelElement.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stateElements" eType="#//ModelElement.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="memorySizeFootprint" eType="#//ModelElement.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="createService" eType="#//ResourceService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deleteService" eType="#//ResourceService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="initialService" eType="#//ResourceService"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entrypoint" eType="#//EntryPoint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="ModelElement" instanceTypeName="newDataType1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryPoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReentrant" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="routine" eType="#//Behavior"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Behavior"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MemoryPartition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swresource" upperBound="-1"
+        eType="#//SwResource" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptResource" eSuperTypes="#//SwResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SwSchedulableResource" eSuperTypes="#//SwResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceCtrlPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resCtrlPolicy" upperBound="-1"
+        eType="#//ResourceManager.1" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HW_Resource" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="own" upperBound="-1" eType="#//HW_Resource"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p_hw_service" lowerBound="1"
+        upperBound="-1" eType="#//HW_Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="r_hw_service" upperBound="-1"
+        eType="#//HW_Service"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Behavior"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HW_Service" eSuperTypes="#//ResourceService"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceInstance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exeServices" lowerBound="1"
+        upperBound="-1" eType="#//ResourceServiceExec" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//Resource"
+        eOpposite="#//Resource/resourceinstance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceServiceExec">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceinstance" upperBound="-1"
+        eType="#//ResourceService" eOpposite="#//ResourceService/resourceType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceBroker" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceManager" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AccessCtrlPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accCtrlPolicy" upperBound="-1"
+        eType="#//ResourceBroker" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

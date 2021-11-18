@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/GRM/src-gen" creationIcons="false" editDirectory="/GRM.edit/src-gen"
+    editorDirectory="/GRM.editor/src-gen" modelPluginID="GRM" modelName="GRM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>gRM.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="GRM" disposableProviderFactory="true" ecorePackage="gRM.ecore#/">
+    <genDataTypes ecoreDataType="gRM.ecore#//ModelElement.1"/>
+    <genClasses ecoreClass="gRM.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//Resource/maxRIS"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//Resource/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//Resource/resourceinstance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//Resource/resMult"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//Resource/own"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//ResourceManager"/>
+    <genClasses ecoreClass="gRM.ecore#//ResourceService">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//ResourceService/parameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//ResourceService/resourceType"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//ModelElement"/>
+    <genClasses ecoreClass="gRM.ecore#//Parameter"/>
+    <genClasses ecoreClass="gRM.ecore#//SwResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//SwResource/identifierElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//SwResource/stateElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//SwResource/memorySizeFootprint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//SwResource/createService"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//SwResource/deleteService"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//SwResource/initialService"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//SwResource/entrypoint"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//EntryPoint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//EntryPoint/isReentrant"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//EntryPoint/routine"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//Behavior"/>
+    <genClasses ecoreClass="gRM.ecore#//MemoryPartition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//MemoryPartition/swresource"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//InterruptResource"/>
+    <genClasses ecoreClass="gRM.ecore#//SwSchedulableResource"/>
+    <genClasses ecoreClass="gRM.ecore#//ResourceCtrlPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//ResourceCtrlPolicy/resCtrlPolicy"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//HW_Resource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//HW_Resource/own"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gRM.ecore#//HW_Resource/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//HW_Resource/p_hw_service"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//HW_Resource/r_hw_service"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//Behavior.1"/>
+    <genClasses ecoreClass="gRM.ecore#//HW_Service"/>
+    <genClasses ecoreClass="gRM.ecore#//ResourceInstance">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//ResourceInstance/exeServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//ResourceInstance/type"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//ResourceServiceExec">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gRM.ecore#//ResourceServiceExec/resourceinstance"/>
+    </genClasses>
+    <genClasses ecoreClass="gRM.ecore#//ResourceBroker"/>
+    <genClasses ecoreClass="gRM.ecore#//ResourceManager.1"/>
+    <genClasses ecoreClass="gRM.ecore#//AccessCtrlPolicy">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gRM.ecore#//AccessCtrlPolicy/accCtrlPolicy"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
