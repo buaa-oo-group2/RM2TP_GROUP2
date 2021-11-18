@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/metamodels_MARTE/src-gen" creationIcons="false"
+    editDirectory="/metamodels_MARTE.edit/src-gen" editorDirectory="/metamodels_MARTE.editor/src-gen"
+    modelPluginID="metamodels_MARTE" modelName="Metamodels_MARTE" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>metamodels_MARTE.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Metamodels_MARTE" disposableProviderFactory="true" ecorePackage="metamodels_MARTE.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="metamodels_MARTE.ecore#//OptimalityCriterionKind">
+      <genEnumLiterals ecoreEnumLiteral="metamodels_MARTE.ecore#//OptimalityCriterionKind/meetHardDeadlines"/>
+      <genEnumLiterals ecoreEnumLiteral="metamodels_MARTE.ecore#//OptimalityCriterionKind/minimizeMissedDeadlines"/>
+      <genEnumLiterals ecoreEnumLiteral="metamodels_MARTE.ecore#//OptimalityCriterionKind/minimizeMeanTardiness"/>
+      <genEnumLiterals ecoreEnumLiteral="metamodels_MARTE.ecore#//OptimalityCriterionKind/undef"/>
+      <genEnumLiterals ecoreEnumLiteral="metamodels_MARTE.ecore#//OptimalityCriterionKind/other"/>
+    </genEnums>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//AnalysisContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference metamodels_MARTE.ecore#//AnalysisContext/context"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference metamodels_MARTE.ecore#//AnalysisContext/workloadbehavior"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference metamodels_MARTE.ecore#//AnalysisContext/resourceplatform"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//WorkloadBehavior"/>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//ResourcePlatform"/>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//Variable"/>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//ExpressionContext"/>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//SaAnalysisContext">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metamodels_MARTE.ecore#//SaAnalysisContext/isSchedulable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metamodels_MARTE.ecore#//SaAnalysisContext/optimalityCriterion"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//AnalysisContext.1">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference metamodels_MARTE.ecore#//AnalysisContext.1/workloadbehavior"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference metamodels_MARTE.ecore#//AnalysisContext.1/resourcesplatform"/>
+    </genClasses>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//WorkloadBehavior.1"/>
+    <genClasses ecoreClass="metamodels_MARTE.ecore#//ResourcesPlatform"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metamodels_MARTE" nsURI="http://www.example.org/metamodels_MARTE"
+    nsPrefix="metamodels_MARTE">
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisContext" eSuperTypes="#//ExpressionContext">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
+        eType="#//Variable" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workloadbehavior" lowerBound="1"
+        upperBound="-1" eType="#//WorkloadBehavior"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceplatform" lowerBound="1"
+        upperBound="-1" eType="#//ResourcePlatform"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkloadBehavior"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePlatform"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionContext"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SaAnalysisContext" eSuperTypes="#//AnalysisContext.1">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSchedulable" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="optimalityCriterion" upperBound="4"
+        eType="#//OptimalityCriterionKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisContext">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workloadbehavior" lowerBound="1"
+        eType="#//WorkloadBehavior.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourcesplatform" lowerBound="1"
+        upperBound="-1" eType="#//ResourcesPlatform"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkloadBehavior"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcesPlatform"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="OptimalityCriterionKind">
+    <eLiterals name="meetHardDeadlines"/>
+    <eLiterals name="minimizeMissedDeadlines" value="1"/>
+    <eLiterals name="minimizeMeanTardiness" value="2"/>
+    <eLiterals name="undef" value="3"/>
+    <eLiterals name="other" value="4"/>
+  </eClassifiers>
+</ecore:EPackage>
