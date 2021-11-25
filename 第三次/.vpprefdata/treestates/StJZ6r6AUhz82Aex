@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ProjectTreeState projectID="6TVgzL6AUhzwZgBO" projectPath="D:\\u6587\u6863\u548c\u6750\u6599\\u7814\u4e00\\u9762\u5411\u5bf9\u8c61\RM2TP_GROUP2\\u7b2c\u4e09\u6b21\Group2.vpp">
-	<TreeState name="ModelRepository" viewX="0" viewY="0">
-		<ExpandedPath>ModelRepository</ExpandedPath>
-	</TreeState>
+<ProjectTreeState projectID="6TVgzL6AUhzwZgBO" projectPath="D:\\u6587\u6863\u548c\u6750\u6599\\u7814\u4e00\\u9762\u5411\u5bf9\u8c61\RM2TP_GROUP2\RM2TP_GROUP2\\u7b2c\u4e09\u6b21\Group2.vpp">
+	<TreeState name="ModelRepository" viewX="0" viewY="0"/>
 	<TreeState name="DiagramNavigator" viewX="0" viewY="0">
 		<ExpandedPath>DiagramNavigator</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,UML Diagrams</ExpandedPath>
+		<ExpandedPath>InteractionDiagram</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Requirements Capturing</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Database Modeling</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Business Modeling</ExpandedPath>
@@ -23,6 +22,7 @@
 		<ExpandedPath>DiagramNavigator,Network Design</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,General</ExpandedPath>
 		<ExpandedPath>DiagramNavigator,Others</ExpandedPath>
+		<SelectedPath>InteractionDiagram,5KlJ6r6GAqCAARdW</SelectedPath>
 	</TreeState>
 	<TreeState name="ClassBrowser" viewX="0" viewY="0"/>
 	<TreeState name="LogicalView" viewX="0" viewY="0"/>
