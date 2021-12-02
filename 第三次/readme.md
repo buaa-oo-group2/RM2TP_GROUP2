@@ -11,10 +11,20 @@
 
 >![类图，第二版](imgs/类图(abstract_factory).png "类图(第二版)")
 
->### 3. 使用Abstract Factory设计模式的原因：
+>### 3. (第三版)为User和File类增加Observer模式
+
+>![类图，第三版](imgs/类图(abstract_factory+observer).png "类图(第三版)")
+
+>### 4. 使用Abstract Factory设计模式的原因：
 >>+ 分离了具体的类
 >>+ 方便修改继承于File的各个子类
 >>+ 有利于各子类的一致性
+
+>### 5. 使用Observer设计模式的原因：
+>>+ 能降低Teacher类和Paper类的耦合度
+>>+ 使这两个类的关系仅在于消息的通知
+>>+ Paper类无需关心Teacher类
+>>+ 支持论文修改后的广播通信
 
 ## 时序图
 
