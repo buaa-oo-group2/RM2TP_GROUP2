@@ -1,0 +1,22 @@
+-- @path mARTE=/MARTE/model/mARTE.ecore
+
+module nfp2Annotation;
+create OUT : mARTE from IN : mARTE;
+
+rule SampleRealization2AnnotatedElement {
+	from 
+		s: mARTE!SampleRealization
+	to
+		t: mARTE!AnnotatedElement (
+			elementName <- s.measureName
+		)
+}
+
+rule Measure2AnnotatedElement {
+	from 
+		s: mARTE!Measure
+	to
+		t: mARTE!AnnotatedElement (
+			elementName <- s.measureName
+		)
+}
