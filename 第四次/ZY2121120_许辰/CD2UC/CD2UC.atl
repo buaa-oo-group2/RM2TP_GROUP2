@@ -1,0 +1,46 @@
+-- @path CD=/CD2UC/CD.ecore
+-- @path UC=/CD2UC/UC.ecore
+module CD2UC;
+create OUT: UC from IN: CD;
+
+helper context CD!Entity def: isActor(): Boolean =
+	if self.name = 'User' then
+		true
+	else
+		false
+	endif;
+
+helper context CD!Reference def: UseCaseName: String =
+	if not self.entity.oclIsUndefined() then
+		self.name + '_' + self.entity.name
+	else
+		''
+	endif;
+
+	
+rule Entity2Actor {
+	from
+		s: CD!Entity (s.isActor())
+	to
+		t: UC!Actor (
+			description <- s.name
+		)
+}
+
+rule Entity2UseCase {
+	from
+		s: CD!Entity (not s.isActor())
+	to
+		t: UC!UseCase (
+			Name <- s.name
+		)
+}
+
+rule Reference2UseCase {
+	from
+		s: CD!Reference (not s.entity.oclIsUndefined())
+	to
+		t: UC!UseCase (
+			Name <- s.UseCaseName
+		)
+}
