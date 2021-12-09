@@ -3,10 +3,10 @@
 # 输入\输出端模型.xmi文件
 输入端模型文件为Contexts2Elements文件夹中的sample-Contexts.xmi文件，输出端模型文件为Contexts2Elements文件夹中的sample-Elements.xmi文件。
 # 输入端元模型截图
-![元模型截图](images/1.PNG "元模型截图")
+![元模型截图](images/1.png "元模型截图")
 # 输出端元模型截图
-![输出端元模型截图](images/2.PNG "输出端元模型截图")
+![输出端元模型截图](images/2.png "输出端元模型截图")
 # 输入端模型截图
-![输入端模型截图](images/3.PNG "输入端模型截图")
+![输入端模型截图](images/3.png "输入端模型截图")
 # 输出端模型截图
-![输出端模型截图](images/4.PNG "输出端模型截图")
+![输出端模型截图](images/4.png "输出端模型截图")
