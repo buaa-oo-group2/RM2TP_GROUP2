@@ -28,13 +28,16 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Measure/measurementUnit"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Measure/physicalQuantity"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Measure/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//Measure/measureName"/>
     </genClasses>
     <genClasses ecoreClass="mARTE.ecore#//SampleRealization">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//SampleRealization/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//SampleRealization/measureName"/>
     </genClasses>
     <genClasses ecoreClass="mARTE.ecore#//QuantitativeNFP">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//QuantitativeNFP/realizationValues"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//QuantitativeNFP/measure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//QuantitativeNFP/numbers"/>
     </genClasses>
     <genClasses ecoreClass="mARTE.ecore#//QualitativeNFP">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//QualitativeNFP/parameter"/>
@@ -65,6 +68,7 @@
     <genClasses ecoreClass="mARTE.ecore#//AnnotatedElement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedElement/nfpDeclaration"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedElement/nfpValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//AnnotatedElement/elementName"/>
     </genClasses>
     <genClasses image="false" ecoreClass="mARTE.ecore#//ModelElement"/>
     <genClasses ecoreClass="mARTE.ecore#//AnnotatedModel">

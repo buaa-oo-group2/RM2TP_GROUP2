@@ -18,16 +18,19 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="physicalQuantity" eType="#//Quantity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domain" lowerBound="1"
         upperBound="-1" eType="#//SampleRealization" eOpposite="#//SampleRealization/function"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measureName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SampleRealization">
     <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
         eType="#//Measure" eOpposite="#//Measure/domain"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measureName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuantitativeNFP" eSuperTypes="#//AbstractNFP">
     <eStructuralFeatures xsi:type="ecore:EReference" name="realizationValues" upperBound="-1"
         eType="#//SampleRealization" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="measure" upperBound="-1"
         eType="#//Measure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numbers" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//IntObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QualitativeNFP" eSuperTypes="#//AbstractNFP">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
@@ -68,6 +71,7 @@
         eType="#//NFP"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nfpValue" upperBound="-1"
         eType="#//ValueSpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="AnnotatedModel">
