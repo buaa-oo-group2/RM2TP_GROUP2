@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Elements">
+  <Behavior elementID="behavior ID 9986  in context ID 1024"/>
+  <Behavior elementID="behavior ID 9987  in context ID 1024"/>
+  <Behavior elementID="behavior ID 9988  in context ID 1024"/>
+  <Behavior elementID="behavior ID 10066  in context ID 1120"/>
+  <Behavior elementID="behavior ID 10067  in context ID 1120"/>
+  <Behavior elementID="behavior ID 10068  in context ID 1120"/>
+  <Platform elementID="platform ID 298  in context ID 1024"/>
+  <Platform elementID="platform ID 299  in context ID 1024"/>
+  <Platform elementID="platform ID 1225  in context ID 1120"/>
+  <Platform elementID="platform ID 1226  in context ID 1120"/>
+  <Platform elementID="platform ID 1227  in context ID 1120"/>
+</xmi:XMI>

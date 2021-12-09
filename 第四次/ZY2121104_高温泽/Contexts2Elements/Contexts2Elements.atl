@@ -1,0 +1,25 @@
+module Contexts2Elements;
+-- @path Contexts=/Contexts2Elements/Contexts.ecore
+-- @path Elements=/Contexts2Elements/Elements.ecore
+create OUT: Elements from IN: Contexts;
+helper context Contexts!WorkloadBehavior def: behaviorInContextID: String = self.behaviorInContext.contextID;
+	
+helper context Contexts!ResourcePlatform def: platformInContextID: String = self.platformInContext.contextID;
+	
+rule WorkloadBehavior2Behavior {
+	from
+		s: Contexts!WorkloadBehavior 
+	to
+		t: Elements!Behavior (
+			elementID <- 'behavior ID ' + s.behaviorID + '  in context ID ' + s.behaviorInContextID
+		)
+}
+
+rule ResourcePlatform2Platform {
+	from
+		s: Contexts!ResourcePlatform 
+	to
+		t: Elements!Platform (
+			elementID <- 'platform ID ' + s.platformID + '  in context ID ' + s.platformInContextID
+		)
+}
