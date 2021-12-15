@@ -1,106 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/MARTE/src-gen" creationIcons="false" editDirectory="/MARTE.edit/src-gen"
-    editorDirectory="/MARTE.editor/src-gen" modelPluginID="MARTE" modelName="MARTE"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/MARTE/src" modelPluginID="MARTE" modelName="MARTE"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>mARTE.ecore</foreignModel>
-  <testsDirectory xsi:nil="true"/>
   <genPackages prefix="MARTE" disposableProviderFactory="true" ecorePackage="mARTE.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mARTE.ecore#//ConstrainKind">
-      <genEnumLiterals ecoreEnumLiteral="mARTE.ecore#//ConstrainKind/required"/>
-      <genEnumLiterals ecoreEnumLiteral="mARTE.ecore#//ConstrainKind/offered"/>
-      <genEnumLiterals ecoreEnumLiteral="mARTE.ecore#//ConstrainKind/contract"/>
-    </genEnums>
-    <genClasses ecoreClass="mARTE.ecore#//Dimension">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//Dimension/symbol"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//Dimension/baseExponents"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Dimension/basequantity"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//Unit">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//Unit/convFactor"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//Unit/convOffset"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Unit/baseUnit"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//Measure">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Measure/measurementUnit"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Measure/physicalQuantity"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Measure/domain"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//Measure/measureName"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//SampleRealization">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//SampleRealization/function"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//SampleRealization/measureName"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//QuantitativeNFP">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//QuantitativeNFP/realizationValues"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//QuantitativeNFP/measure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//QuantitativeNFP/numbers"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//QualitativeNFP">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//QualitativeNFP/parameter"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//AbstractNFP"/>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//Quantity">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Quantity/allowedUnits"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Quantity/dimension"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//DerivedQuantity"/>
-    <genClasses ecoreClass="mARTE.ecore#//BaseQuantity"/>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//TupleType"/>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//ValueType">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueType/allowedUnits"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueType/defaultUnit"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueType/valueAttribute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueType/unitAttribute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueType/exprAttribute"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueType/qualifierAttributes"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//ValueProperty">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueProperty/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//ValueProperty/defaultValue"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//NFP"/>
-    <genClasses ecoreClass="mARTE.ecore#//NFP_Type"/>
-    <genClasses ecoreClass="mARTE.ecore#//Property"/>
-    <genClasses ecoreClass="mARTE.ecore#//AnnotatedElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedElement/nfpDeclaration"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedElement/nfpValue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//AnnotatedElement/elementName"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//ModelElement"/>
-    <genClasses ecoreClass="mARTE.ecore#//AnnotatedModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedModel/owner"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedModel/annotationConcern"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//AnnotatedModel/context"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//ModelingConcern">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//ModelingConcern/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//ModelingConcern/relevantNfp"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//NFP_Constrain">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Constrain/kind"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Constrain/mode"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Constrain/constrainedElement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Constrain/specification"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//Mode"/>
-    <genClasses ecoreClass="mARTE.ecore#//ValueSpecification"/>
-    <genClasses ecoreClass="mARTE.ecore#//Allocation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Allocation/target"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Allocation/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Allocation/inpliedConstraint"/>
-    </genClasses>
-    <genClasses ecoreClass="mARTE.ecore#//NFP_Constraint"/>
-    <genClasses ecoreClass="mARTE.ecore#//ApplicationAllocationEnd"/>
-    <genClasses ecoreClass="mARTE.ecore#//ExecutionPlatformAllocationEnd"/>
-    <genClasses ecoreClass="mARTE.ecore#//Refinement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Refinement/general"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Refinement/refined"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mARTE.ecore#//Refinement/constraint"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="mARTE.ecore#//AllocationEnd"/>
+    <nestedGenPackages prefix="NFP_Natrue" disposableProviderFactory="true" ecorePackage="mARTE.ecore#//NFP_Natrue">
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/DerivedQuantity"/>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/BaseQuantity"/>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/SampleRealization">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/SampleRealization/function"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Natrue/SampleRealization/measureName"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/Dimension">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Natrue/Dimension/symbol"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Dimension/basequantity"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="mARTE.ecore#//NFP_Natrue/AbstractNFP"/>
+      <genClasses image="false" ecoreClass="mARTE.ecore#//NFP_Natrue/Quantity">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Quantity/allowedUnits"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Quantity/dimension"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/QuantitativeNFP">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/QuantitativeNFP/realizationValues"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/QuantitativeNFP/measure"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Natrue/QuantitativeNFP/numbers"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/Measure">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Measure/measurementUnit"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Measure/physicalQuantity"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Measure/domain"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Natrue/Measure/measureName"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/Unit">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Natrue/Unit/convFactor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Natrue/Unit/convOffset"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/Unit/baseUnit"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Natrue/QualitativeNFP">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Natrue/QualitativeNFP/parameter"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NFP_Annotation" disposableProviderFactory="true" ecorePackage="mARTE.ecore#//NFP_Annotation">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="mARTE.ecore#//NFP_Annotation/ConstrainKind">
+        <genEnumLiterals ecoreEnumLiteral="mARTE.ecore#//NFP_Annotation/ConstrainKind/required"/>
+        <genEnumLiterals ecoreEnumLiteral="mARTE.ecore#//NFP_Annotation/ConstrainKind/offered"/>
+        <genEnumLiterals ecoreEnumLiteral="mARTE.ecore#//NFP_Annotation/ConstrainKind/contract"/>
+      </genEnums>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Annotation/NFP_Constraint">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Annotation/NFP_Constraint/kind"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Annotation/NFP_Constraint/constrainedElement"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Annotation/AnnotatedElement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Annotation/AnnotatedElement/nfpDeclaration"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Annotation/AnnotatedElement/elementName"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Annotation/AnnotatedModel">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Annotation/AnnotatedModel/owner"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Annotation/AnnotatedModel/annotationConcern"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Annotation/AnnotatedModel/context"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Annotation/ModelingConcern">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mARTE.ecore#//NFP_Annotation/ModelingConcern/description"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Annotation/ModelingConcern/relevantNfp"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="NFP_Declaration" disposableProviderFactory="true" ecorePackage="mARTE.ecore#//NFP_Declaration">
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Declaration/NFP"/>
+      <genClasses image="false" ecoreClass="mARTE.ecore#//NFP_Declaration/ValueType">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Declaration/ValueType/allowedUnits"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Declaration/ValueType/defaultUnit"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="mARTE.ecore#//NFP_Declaration/ValueProperty">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//NFP_Declaration/ValueProperty/type"/>
+      </genClasses>
+      <genClasses ecoreClass="mARTE.ecore#//NFP_Declaration/NFP_Type"/>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Allocations" disposableProviderFactory="true" ecorePackage="mARTE.ecore#//Allocations">
+      <genClasses ecoreClass="mARTE.ecore#//Allocations/ExecutionPlatformAllocationEnd"/>
+      <genClasses ecoreClass="mARTE.ecore#//Allocations/ApplicationAllocationEnd"/>
+      <genClasses ecoreClass="mARTE.ecore#//Allocations/Allocation">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Allocation/target"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Allocation/source"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Allocation/inpliedConstraint"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="mARTE.ecore#//Allocations/AllocationEnd"/>
+      <genClasses ecoreClass="mARTE.ecore#//Allocations/NFP_Constraint"/>
+      <genClasses ecoreClass="mARTE.ecore#//Allocations/Refinement">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Refinement/general"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Refinement/refined"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Refinement/constraint"/>
+      </genClasses>
+    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

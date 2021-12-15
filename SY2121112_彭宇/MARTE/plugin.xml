@@ -9,9 +9,32 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated mARTE -->
       <package
-            uri="http://www.example.org/mARTE"
-            class="mARTE.MARTEPackage"
+            uri="http://www.example.org/mARTE/NFP_Natrue"
+            class="mARTE.NFP_Natrue.NFP_NatruePackage"
             genModel="model/mARTE.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mARTE -->
+      <package
+            uri="http://www.example.org/mARTE/NFP_Annotation"
+            class="mARTE.NFP_Annotation.NFP_AnnotationPackage"
+            genModel="model/mARTE.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mARTE -->
+      <package
+            uri="http://www.example.org/mARTE/NFP_Declaration"
+            class="mARTE.NFP_Declaration.NFP_DeclarationPackage"
+            genModel="model/mARTE.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated mARTE -->
+      <package
+            uri="http://www.example.org/mARTE/Allocations"
+            class="mARTE.Allocations.AllocationsPackage"
+            genModel="model/mARTE.genmodel"/>
+   </extension>
 </plugin>

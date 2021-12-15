@@ -8,9 +8,19 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: mARTE,
- mARTE.impl,
- mARTE.util
+Export-Package: mARTE.Allocations,
+ mARTE.Allocations.impl,
+ mARTE.Allocations.util,
+ mARTE.NFP_Annotation,
+ mARTE.NFP_Annotation.impl,
+ mARTE.NFP_Annotation.util,
+ mARTE.NFP_Declaration,
+ mARTE.NFP_Declaration.impl,
+ mARTE.NFP_Declaration.util,
+ mARTE.NFP_Natrue,
+ mARTE.NFP_Natrue.impl,
+ mARTE.NFP_Natrue.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ MARTE;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
