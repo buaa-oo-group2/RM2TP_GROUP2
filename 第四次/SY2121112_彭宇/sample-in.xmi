@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:natrue="http://www.example.org/mARTE/NFP_Natrue">
+	<natrue:QuantitativeNFP>
+		<measure measureName="mean"/>
+		<measure measureName="max"/>
+		<realizationValues measureName="min"/>
+		<realizationValues measureName="max"/>
+	</natrue:QuantitativeNFP>
+	<natrue:SampleRealization>
+		<function measureName="min"/>
+		<function measureName="max"/>
+		<function measureName="mean"/>
+	</natrue:SampleRealization>
+	<natrue:Measure>
+		<measurementUnit convFactor="1.0" convOffset="10"/>
+		<measurementUnit convFactor="2.0" convOffset="100"/>
+		<measurementUnit convFactor="3.0" convOffset="1000"/>
+	</natrue:Measure>
+</xmi:XMI>

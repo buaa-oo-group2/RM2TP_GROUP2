@@ -5,11 +5,14 @@ Bundle-SymbolicName: MARTE.edit;singleton:=true
 Automatic-Module-Name: MARTE.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: mARTE.provider.MARTEEditPlugin$Implementation
+Bundle-Activator: mARTE.NFP_Natrue.provider.MARTEEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: mARTE.provider
+Export-Package: mARTE.Allocations.provider,
+ mARTE.NFP_Annotation.provider,
+ mARTE.NFP_Declaration.provider,
+ mARTE.NFP_Natrue.provider
 Require-Bundle: org.eclipse.core.runtime,
  MARTE;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Contexts">
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisContext">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contextID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behavior" lowerBound="1"
+        upperBound="-1" eType="#//WorkloadBehavior" containment="true" eOpposite="#//WorkloadBehavior/behaviorInContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platform" lowerBound="1"
+        upperBound="-1" eType="#//ResourcePlatform" containment="true" eOpposite="#//ResourcePlatform/platformInContext"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkloadBehavior">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="behaviorID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviorInContext" lowerBound="1"
+        eType="#//AnalysisContext" eOpposite="#//AnalysisContext/behavior"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePlatform">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="platformID" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformInContext" lowerBound="1"
+        eType="#//AnalysisContext" eOpposite="#//AnalysisContext/platform"/>
+  </eClassifiers>
+</ecore:EPackage>

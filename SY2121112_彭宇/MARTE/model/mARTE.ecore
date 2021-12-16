@@ -1,121 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mARTE" nsURI="http://www.example.org/mARTE" nsPrefix="mARTE">
-  <eClassifiers xsi:type="ecore:EClass" name="Dimension">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseExponents" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="basequantity" upperBound="-1"
-        eType="#//BaseQuantity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Unit">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="convFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="convOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DoubleObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="baseUnit" eType="#//Unit"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Measure">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="measurementUnit" eType="#//Unit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalQuantity" eType="#//Quantity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="domain" lowerBound="1"
-        upperBound="-1" eType="#//SampleRealization" eOpposite="#//SampleRealization/function"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SampleRealization">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
-        eType="#//Measure" eOpposite="#//Measure/domain"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QuantitativeNFP" eSuperTypes="#//AbstractNFP">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="realizationValues" upperBound="-1"
-        eType="#//SampleRealization" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="measure" upperBound="-1"
-        eType="#//Measure" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QualitativeNFP" eSuperTypes="#//AbstractNFP">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
-        eType="#//AbstractNFP"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractNFP" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Quantity" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedUnits" upperBound="-1"
-        eType="#//Unit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" eType="#//Dimension"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DerivedQuantity" eSuperTypes="#//Quantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BaseQuantity" eSuperTypes="#//Quantity"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TupleType" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValueType" abstract="true" eSuperTypes="#//TupleType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedUnits" upperBound="-1"
-        eType="#//Unit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultUnit" eType="#//Unit"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="valueAttribute" eType="#//Property"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unitAttribute" eType="#//Property"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exprAttribute" eType="#//Property"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="qualifierAttributes" upperBound="-1"
-        eType="#//Property" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValueProperty" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ValueType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultValue" eType="#//ValueSpecification"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NFP" eSuperTypes="#//ValueProperty"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NFP_Type" eSuperTypes="#//ValueType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Property"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AnnotatedElement" eSuperTypes="#//ModelElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nfpDeclaration" upperBound="-1"
-        eType="#//NFP"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nfpValue" upperBound="-1"
-        eType="#//ValueSpecification" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelElement" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AnnotatedModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" upperBound="-1"
-        eType="#//AnnotatedElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="annotationConcern" lowerBound="1"
-        upperBound="-1" eType="#//ModelingConcern"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="#//NFP_Constrain"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModelingConcern">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relevantNfp" upperBound="-1"
-        eType="#//NFP"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ConstrainKind">
-    <eLiterals name="required"/>
-    <eLiterals name="offered" value="1"/>
-    <eLiterals name="contract" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NFP_Constrain">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//ConstrainKind"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mode" upperBound="-1" eType="#//Mode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="constrainedElement" upperBound="-1"
-        eType="#//AnnotatedElement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="specification" upperBound="-1"
-        eType="#//ValueSpecification" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Mode"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ValueSpecification"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Allocation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        upperBound="-1" eType="#//ExecutionPlatformAllocationEnd"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        upperBound="-1" eType="#//ApplicationAllocationEnd"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inpliedConstraint" upperBound="-1"
-        eType="#//NFP_Constraint"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NFP_Constraint"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ApplicationAllocationEnd" eSuperTypes="#//AllocationEnd"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutionPlatformAllocationEnd" eSuperTypes="#//AllocationEnd"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Refinement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
-        upperBound="-1" eType="#//AllocationEnd"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="refined" lowerBound="1"
-        upperBound="-1" eType="#//AllocationEnd"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
-        eType="#//NFP_Constraint"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllocationEnd" abstract="true"/>
+  <eSubpackages name="NFP_Natrue" nsURI="http://www.example.org/mARTE/NFP_Natrue"
+      nsPrefix="natrue">
+    <eClassifiers xsi:type="ecore:EClass" name="DerivedQuantity" eSuperTypes="#//NFP_Natrue/Quantity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="BaseQuantity" eSuperTypes="#//NFP_Natrue/Quantity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SampleRealization">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
+          eType="#//NFP_Natrue/Measure" eOpposite="#//NFP_Natrue/Measure/domain"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="measureName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractNFP" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Quantity" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allowedUnits" upperBound="-1"
+          eType="#//NFP_Natrue/Unit"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="QuantitativeNFP" eSuperTypes="#//NFP_Natrue/AbstractNFP">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="realizationValues" upperBound="-1"
+          eType="#//NFP_Natrue/SampleRealization" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="measure" upperBound="-1"
+          eType="#//NFP_Natrue/Measure" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numbers" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//IntObject"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Measure">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="measurementUnit" eType="#//NFP_Natrue/Unit"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="physicalQuantity" eType="#//NFP_Natrue/Quantity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="domain" lowerBound="1"
+          upperBound="-1" eType="#//NFP_Natrue/SampleRealization" eOpposite="#//NFP_Natrue/SampleRealization/function"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="measureName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Unit">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="convFactor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="convOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DoubleObject"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="baseUnit" eType="#//NFP_Natrue/Unit"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="QualitativeNFP" eSuperTypes="#//NFP_Natrue/AbstractNFP"/>
+  </eSubpackages>
+  <eSubpackages name="NFP_Annotation" nsURI="http://www.example.org/mARTE/NFP_Annotation"
+      nsPrefix="annotation">
+    <eClassifiers xsi:type="ecore:EClass" name="NFP_Constraint">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//NFP_Annotation/ConstrainKind"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="constrainedElement" upperBound="-1"
+          eType="#//NFP_Annotation/AnnotatedElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AnnotatedElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="nfpDeclaration" upperBound="-1"
+          eType="#//NFP_Declaration/NFP"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AnnotatedModel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1"
+          upperBound="-1" eType="#//NFP_Annotation/AnnotatedElement" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="annotationConcern" lowerBound="1"
+          upperBound="-1" eType="#//NFP_Annotation/ModelingConcern"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="#//NFP_Annotation/NFP_Constraint"
+          containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ConstrainKind">
+      <eLiterals name="required"/>
+      <eLiterals name="offered" value="1"/>
+      <eLiterals name="contract" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ModelingConcern">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="relevantNfp" upperBound="-1"
+          eType="#//NFP_Declaration/NFP"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="NFP_Declaration" nsURI="http://www.example.org/mARTE/NFP_Declaration"
+      nsPrefix="declaration">
+    <eClassifiers xsi:type="ecore:EClass" name="NFP" eSuperTypes="#//NFP_Declaration/ValueProperty"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ValueType" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allowedUnits" upperBound="-1"
+          eType="#//NFP_Natrue/Unit"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="defaultUnit" eType="#//NFP_Natrue/Unit"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ValueProperty" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//NFP_Declaration/ValueType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NFP_Type" eSuperTypes="#//NFP_Declaration/ValueType"/>
+  </eSubpackages>
+  <eSubpackages name="Allocations" nsURI="http://www.example.org/mARTE/Allocations"
+      nsPrefix="allocations">
+    <eClassifiers xsi:type="ecore:EClass" name="ExecutionPlatformAllocationEnd" eSuperTypes="#//Allocations/AllocationEnd"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ApplicationAllocationEnd" eSuperTypes="#//Allocations/AllocationEnd"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Allocation">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+          upperBound="-1" eType="#//Allocations/ExecutionPlatformAllocationEnd"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+          upperBound="-1" eType="#//Allocations/ApplicationAllocationEnd"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="inpliedConstraint" upperBound="-1"
+          eType="#//NFP_Annotation/NFP_Constraint"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AllocationEnd" abstract="true"/>
+  </eSubpackages>
 </ecore:EPackage>

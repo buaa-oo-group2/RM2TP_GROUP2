@@ -12,12 +12,12 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="mARTE.presentation.MARTEModelWizardID"
-            name="%_UI_MARTEModelWizard_label"
-            class="mARTE.presentation.MARTEModelWizard"
+            id="mARTE.NFP_Natrue.presentation.NFP_NatrueModelWizardID"
+            name="%_UI_NFP_NatrueModelWizard_label"
+            class="mARTE.NFP_Natrue.presentation.NFP_NatrueModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/MARTEModelFile.gif">
-         <description>%_UI_MARTEModelWizard_description</description>
+            icon="icons/full/obj16/NFP_NatrueModelFile.gif">
+         <description>%_UI_NFP_NatrueModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
@@ -25,12 +25,96 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated mARTE -->
       <editor
-            id="mARTE.presentation.MARTEEditorID"
-            name="%_UI_MARTEEditor_label"
-            icon="icons/full/obj16/MARTEModelFile.gif"
-            extensions="marte"
-            class="mARTE.presentation.MARTEEditor"
-            contributorClass="mARTE.presentation.MARTEActionBarContributor">
+            id="mARTE.NFP_Natrue.presentation.NFP_NatrueEditorID"
+            name="%_UI_NFP_NatrueEditor_label"
+            icon="icons/full/obj16/NFP_NatrueModelFile.gif"
+            extensions="nfp_natrue"
+            class="mARTE.NFP_Natrue.presentation.NFP_NatrueEditor"
+            contributorClass="mARTE.NFP_Natrue.presentation.NFP_NatrueActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mARTE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mARTE.NFP_Annotation.presentation.NFP_AnnotationModelWizardID"
+            name="%_UI_NFP_AnnotationModelWizard_label"
+            class="mARTE.NFP_Annotation.presentation.NFP_AnnotationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/NFP_AnnotationModelFile.gif">
+         <description>%_UI_NFP_AnnotationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mARTE -->
+      <editor
+            id="mARTE.NFP_Annotation.presentation.NFP_AnnotationEditorID"
+            name="%_UI_NFP_AnnotationEditor_label"
+            icon="icons/full/obj16/NFP_AnnotationModelFile.gif"
+            extensions="nfp_annotation"
+            class="mARTE.NFP_Annotation.presentation.NFP_AnnotationEditor"
+            contributorClass="mARTE.NFP_Annotation.presentation.NFP_AnnotationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mARTE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mARTE.NFP_Declaration.presentation.NFP_DeclarationModelWizardID"
+            name="%_UI_NFP_DeclarationModelWizard_label"
+            class="mARTE.NFP_Declaration.presentation.NFP_DeclarationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/NFP_DeclarationModelFile.gif">
+         <description>%_UI_NFP_DeclarationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mARTE -->
+      <editor
+            id="mARTE.NFP_Declaration.presentation.NFP_DeclarationEditorID"
+            name="%_UI_NFP_DeclarationEditor_label"
+            icon="icons/full/obj16/NFP_DeclarationModelFile.gif"
+            extensions="nfp_declaration"
+            class="mARTE.NFP_Declaration.presentation.NFP_DeclarationEditor"
+            contributorClass="mARTE.NFP_Declaration.presentation.NFP_DeclarationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mARTE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="mARTE.Allocations.presentation.AllocationsModelWizardID"
+            name="%_UI_AllocationsModelWizard_label"
+            class="mARTE.Allocations.presentation.AllocationsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AllocationsModelFile.gif">
+         <description>%_UI_AllocationsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mARTE -->
+      <editor
+            id="mARTE.Allocations.presentation.AllocationsEditorID"
+            name="%_UI_AllocationsEditor_label"
+            icon="icons/full/obj16/AllocationsModelFile.gif"
+            extensions="allocations"
+            class="mARTE.Allocations.presentation.AllocationsEditor"
+            contributorClass="mARTE.Allocations.presentation.AllocationsActionBarContributor">
       </editor>
    </extension>
 
