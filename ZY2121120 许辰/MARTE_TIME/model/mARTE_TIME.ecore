@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mARTE_TIME" nsURI="http://www.example.org/mARTE_TIME" nsPrefix="mARTE_TIME">
+  <eClassifiers xsi:type="ecore:EClass" name="Root">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timedelement" upperBound="-1"
+        eType="#//TimedElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clock" eType="#//Clock"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clock" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+        defaultValueLiteral="0.0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedObservation" abstract="true" eSuperTypes="#//TimedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedConstraint" abstract="true" eSuperTypes="#//TimedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedProcessing" abstract="true" eSuperTypes="#//TimedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedMessage" eSuperTypes="#//TimedProcessing">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedInstantConstraint" eSuperTypes="#//TimedConstraint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instantpredication" lowerBound="1"
+        eType="#//InstantPredicate" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedDurationConstraint" eSuperTypes="#//TimedConstraint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="durationpredication" lowerBound="1"
+        eType="#//DurationPredicate" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DurationPredicate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeddurationobservation"
+        lowerBound="1" upperBound="-1" eType="#//TimedDurationObservation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedDurationObservation" eSuperTypes="#//TimedObservation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obsKind" eType="#//EventKind"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedInstantObservation" eSuperTypes="#//TimedObservation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obsKind" eType="#//EventKind"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InstantPredicate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timedinstantobservation"
+        lowerBound="1" upperBound="-1" eType="#//TimedInstantObservation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalClock" eSuperTypes="#//Clock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChronometricClock" eSuperTypes="#//Clock">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EventKind">
+    <eLiterals name="start"/>
+    <eLiterals name="finish" value="1"/>
+    <eLiterals name="send" value="2"/>
+    <eLiterals name="receive" value="3"/>
+    <eLiterals name="consume" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedBehavior" eSuperTypes="#//TimedProcessing">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimedAction" eSuperTypes="#//TimedProcessing">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
