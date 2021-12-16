@@ -93,6 +93,5 @@
           eType="#//NFP_Annotation/NFP_Constraint"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AllocationEnd" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="NFP_Constraint"/>
   </eSubpackages>
 </ecore:EPackage>

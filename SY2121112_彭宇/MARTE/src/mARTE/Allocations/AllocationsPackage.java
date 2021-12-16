@@ -194,34 +194,6 @@ public interface AllocationsPackage extends EPackage {
 	 */
 	int ALLOCATION_OPERATION_COUNT = 0;
 
-	/**
-	 * The meta object id for the '{@link mARTE.Allocations.impl.NFP_ConstraintImpl <em>NFP Constraint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mARTE.Allocations.impl.NFP_ConstraintImpl
-	 * @see mARTE.Allocations.impl.AllocationsPackageImpl#getNFP_Constraint()
-	 * @generated
-	 */
-	int NFP_CONSTRAINT = 4;
-
-	/**
-	 * The number of structural features of the '<em>NFP Constraint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NFP_CONSTRAINT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>NFP Constraint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NFP_CONSTRAINT_OPERATION_COUNT = 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link mARTE.Allocations.ExecutionPlatformAllocationEnd <em>Execution Platform Allocation End</em>}'.
@@ -295,16 +267,6 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAllocationEnd();
-
-	/**
-	 * Returns the meta object for class '{@link mARTE.Allocations.NFP_Constraint <em>NFP Constraint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>NFP Constraint</em>'.
-	 * @see mARTE.Allocations.NFP_Constraint
-	 * @generated
-	 */
-	EClass getNFP_Constraint();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -392,16 +354,6 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ALLOCATION_END = eINSTANCE.getAllocationEnd();
-
-		/**
-		 * The meta object literal for the '{@link mARTE.Allocations.impl.NFP_ConstraintImpl <em>NFP Constraint</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mARTE.Allocations.impl.NFP_ConstraintImpl
-		 * @see mARTE.Allocations.impl.AllocationsPackageImpl#getNFP_Constraint()
-		 * @generated
-		 */
-		EClass NFP_CONSTRAINT = eINSTANCE.getNFP_Constraint();
 
 	}
 

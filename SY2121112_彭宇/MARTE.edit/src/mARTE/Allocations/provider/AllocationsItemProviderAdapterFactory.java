@@ -141,29 +141,6 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link mARTE.Allocations.NFP_Constraint} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected NFP_ConstraintItemProvider nfP_ConstraintItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link mARTE.Allocations.NFP_Constraint}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createNFP_ConstraintAdapter() {
-		if (nfP_ConstraintItemProvider == null) {
-			nfP_ConstraintItemProvider = new NFP_ConstraintItemProvider(this);
-		}
-
-		return nfP_ConstraintItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,7 +242,6 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		if (executionPlatformAllocationEndItemProvider != null) executionPlatformAllocationEndItemProvider.dispose();
 		if (applicationAllocationEndItemProvider != null) applicationAllocationEndItemProvider.dispose();
 		if (allocationItemProvider != null) allocationItemProvider.dispose();
-		if (nfP_ConstraintItemProvider != null) nfP_ConstraintItemProvider.dispose();
 	}
 
 }

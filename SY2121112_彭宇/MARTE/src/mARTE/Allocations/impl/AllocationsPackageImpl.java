@@ -8,7 +8,6 @@ import mARTE.Allocations.AllocationsFactory;
 import mARTE.Allocations.AllocationsPackage;
 import mARTE.Allocations.ApplicationAllocationEnd;
 import mARTE.Allocations.ExecutionPlatformAllocationEnd;
-import mARTE.Allocations.NFP_Constraint;
 
 import mARTE.NFP_Annotation.NFP_AnnotationPackage;
 
@@ -62,13 +61,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * @generated
 	 */
 	private EClass allocationEndEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass nfP_ConstraintEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -213,15 +205,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNFP_Constraint() {
-		return nfP_ConstraintEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AllocationsFactory getAllocationsFactory() {
 		return (AllocationsFactory)getEFactoryInstance();
 	}
@@ -255,8 +238,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		createEReference(allocationEClass, ALLOCATION__INPLIED_CONSTRAINT);
 
 		allocationEndEClass = createEClass(ALLOCATION_END);
-
-		nfP_ConstraintEClass = createEClass(NFP_CONSTRAINT);
 	}
 
 	/**
@@ -304,8 +285,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEReference(getAllocation_InpliedConstraint(), theNFP_AnnotationPackage.getNFP_Constraint(), null, "inpliedConstraint", null, 0, -1, Allocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(allocationEndEClass, AllocationEnd.class, "AllocationEnd", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(nfP_ConstraintEClass, NFP_Constraint.class, "NFP_Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

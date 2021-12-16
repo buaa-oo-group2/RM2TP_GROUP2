@@ -92,12 +92,6 @@ public class AllocationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case AllocationsPackage.NFP_CONSTRAINT: {
-				NFP_Constraint nfP_Constraint = (NFP_Constraint)theEObject;
-				T result = caseNFP_Constraint(nfP_Constraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -159,21 +153,6 @@ public class AllocationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAllocationEnd(AllocationEnd object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>NFP Constraint</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>NFP Constraint</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNFP_Constraint(NFP_Constraint object) {
 		return null;
 	}
 

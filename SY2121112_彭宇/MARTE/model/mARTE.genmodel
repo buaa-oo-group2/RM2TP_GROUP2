@@ -94,7 +94,6 @@
             ecoreFeature="ecore:EReference mARTE.ecore#//Allocations/Allocation/inpliedConstraint"/>
       </genClasses>
       <genClasses image="false" ecoreClass="mARTE.ecore#//Allocations/AllocationEnd"/>
-      <genClasses ecoreClass="mARTE.ecore#//Allocations/NFP_Constraint"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

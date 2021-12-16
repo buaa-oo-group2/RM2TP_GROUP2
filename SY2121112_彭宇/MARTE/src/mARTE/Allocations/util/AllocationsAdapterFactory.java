@@ -84,10 +84,6 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 				return createAllocationEndAdapter();
 			}
 			@Override
-			public Adapter caseNFP_Constraint(NFP_Constraint object) {
-				return createNFP_ConstraintAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -160,20 +156,6 @@ public class AllocationsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAllocationEndAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mARTE.Allocations.NFP_Constraint <em>NFP Constraint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mARTE.Allocations.NFP_Constraint
-	 * @generated
-	 */
-	public Adapter createNFP_ConstraintAdapter() {
 		return null;
 	}
 
