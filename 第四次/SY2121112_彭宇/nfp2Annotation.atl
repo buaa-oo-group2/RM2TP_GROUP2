@@ -1,22 +1,61 @@
--- @path mARTE=/MARTE/model/mARTE.ecore
+-- @path Natrue=/MARTE/model/mARTE.ecore
+-- @path Annotation=/MARTE/model/mARTE.ecore
 
-module nfp2Annotation;
-create OUT : mARTE from IN : mARTE;
+module natrue2annotation;
+create OUT : Annotation from IN : Natrue;
+
+rule QuantitativeNFP2AnnotatedModel {
+	from 
+		s: Natrue!QuantitativeNFP
+	to
+		t: Annotation!AnnotatedModel
+}
+
+rule QualitativeNFP2AnnotatedModel {
+	from 
+		s: Natrue!QualitativeNFP
+	to
+		t: Annotation!AnnotatedModel
+}
 
 rule SampleRealization2AnnotatedElement {
 	from 
-		s: mARTE!SampleRealization
+		s: Natrue!SampleRealization
 	to
-		t: mARTE!AnnotatedElement (
+		t: Annotation!AnnotatedElement (
 			elementName <- s.measureName
 		)
 }
 
 rule Measure2AnnotatedElement {
 	from 
-		s: mARTE!Measure
+		s: Natrue!Measure
 	to
-		t: mARTE!AnnotatedElement (
+		t: Annotation!AnnotatedElement (
 			elementName <- s.measureName
+		)
+}
+
+rule BaseQuantity2ModelingConcern {
+	from
+		s: Natrue!BaseQuantity
+	to
+		t: Annotation!ModelingConcern			
+}
+
+rule DerivedQuantity2ModelingConcern {
+	from
+		s: Natrue!DerivedQuantity
+	to
+		t: Annotation!ModelingConcern			
+}
+
+rule Unit2ModelingConcern {
+	from
+		s: Natrue!Unit
+	to
+		t: Annotation!ModelingConcern (
+			convFactor <- s.convFactor,
+			convOffset <- s.convOffset
 		)
 }

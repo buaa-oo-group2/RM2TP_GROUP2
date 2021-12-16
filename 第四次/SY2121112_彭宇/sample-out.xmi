@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:mARTE="http://www.example.org/mARTE">
-  <mARTE:AnnotatedElement elementName="min"/>
-  <mARTE:AnnotatedElement elementName="mean"/>
-  <mARTE:AnnotatedElement elementName="max"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:annotation="http://www.example.org/mARTE/NFP_Annotation">
+  <annotation:AnnotatedModel/>
+  <annotation:AnnotatedElement elementName="min"/>
+  <annotation:AnnotatedElement elementName="max"/>
+  <annotation:AnnotatedElement/>
+  <annotation:AnnotatedElement elementName="mean"/>
+  <annotation:AnnotatedElement elementName="max"/>
+  <annotation:AnnotatedElement/>
 </xmi:XMI>

@@ -5,16 +5,18 @@
     <stringAttribute key="ATL_COMPILER" value="atl2006"/>
     <booleanAttribute key="IS_REFINING" value="false"/>
     <mapAttribute key="Input">
-        <mapEntry key="IN" value="mARTE"/>
+        <mapEntry key="IN" value="Natrue"/>
     </mapAttribute>
     <mapAttribute key="Libs"/>
     <mapAttribute key="Model Handler">
-        <mapEntry key="mARTE" value="EMF"/>
+        <mapEntry key="Annotation" value="EMF"/>
+        <mapEntry key="Natrue" value="EMF"/>
     </mapAttribute>
     <mapAttribute key="ModelType">
+        <mapEntry key="Annotation" value="METAMODELOUTPUT"/>
         <mapEntry key="IN" value="MODELINPUT"/>
+        <mapEntry key="Natrue" value="METAMODELINPUT"/>
         <mapEntry key="OUT" value="MODELOUTPUT"/>
-        <mapEntry key="mARTE" value="METAMODELOUTPUT"/>
     </mapAttribute>
     <mapAttribute key="Options">
         <mapEntry key="OPTION_CLEAR" value="false"/>
@@ -32,12 +34,13 @@
         <listEntry value="OUT"/>
     </listAttribute>
     <mapAttribute key="Output">
-        <mapEntry key="OUT" value="mARTE"/>
+        <mapEntry key="OUT" value="Annotation"/>
     </mapAttribute>
     <mapAttribute key="Path">
+        <mapEntry key="Annotation" value="/MARTE/model/mARTE.ecore"/>
         <mapEntry key="IN" value="/Nfp2Annotation/sample-in.xmi"/>
+        <mapEntry key="Natrue" value="/MARTE/model/mARTE.ecore"/>
         <mapEntry key="OUT" value="/Nfp2Annotation/sample-out.xmi"/>
-        <mapEntry key="mARTE" value="/MARTE/model/mARTE.ecore"/>
     </mapAttribute>
     <listAttribute key="Superimpose"/>
 </launchConfiguration>
