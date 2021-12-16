@@ -64,7 +64,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getQuantity()
 	 * @generated
 	 */
-	int QUANTITY = 5;
+	int QUANTITY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Allowed Units</b></em>' reference list.
@@ -76,22 +76,13 @@ public interface NFP_NatruePackage extends EPackage {
 	int QUANTITY__ALLOWED_UNITS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Dimension</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTITY__DIMENSION = 1;
-
-	/**
 	 * The number of structural features of the '<em>Quantity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUANTITY_FEATURE_COUNT = 2;
+	int QUANTITY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Quantity</em>' class.
@@ -120,15 +111,6 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @ordered
 	 */
 	int DERIVED_QUANTITY__ALLOWED_UNITS = QUANTITY__ALLOWED_UNITS;
-
-	/**
-	 * The feature id for the '<em><b>Dimension</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DERIVED_QUANTITY__DIMENSION = QUANTITY__DIMENSION;
 
 	/**
 	 * The number of structural features of the '<em>Derived Quantity</em>' class.
@@ -166,15 +148,6 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @ordered
 	 */
 	int BASE_QUANTITY__ALLOWED_UNITS = QUANTITY__ALLOWED_UNITS;
-
-	/**
-	 * The feature id for the '<em><b>Dimension</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BASE_QUANTITY__DIMENSION = QUANTITY__DIMENSION;
 
 	/**
 	 * The number of structural features of the '<em>Base Quantity</em>' class.
@@ -241,52 +214,6 @@ public interface NFP_NatruePackage extends EPackage {
 	int SAMPLE_REALIZATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link mARTE.NFP_Natrue.impl.DimensionImpl <em>Dimension</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mARTE.NFP_Natrue.impl.DimensionImpl
-	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getDimension()
-	 * @generated
-	 */
-	int DIMENSION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Symbol</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIMENSION__SYMBOL = 0;
-
-	/**
-	 * The feature id for the '<em><b>Basequantity</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIMENSION__BASEQUANTITY = 1;
-
-	/**
-	 * The number of structural features of the '<em>Dimension</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIMENSION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Dimension</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DIMENSION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link mARTE.NFP_Natrue.impl.AbstractNFPImpl <em>Abstract NFP</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -294,7 +221,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getAbstractNFP()
 	 * @generated
 	 */
-	int ABSTRACT_NFP = 4;
+	int ABSTRACT_NFP = 3;
 
 	/**
 	 * The number of structural features of the '<em>Abstract NFP</em>' class.
@@ -322,7 +249,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getQuantitativeNFP()
 	 * @generated
 	 */
-	int QUANTITATIVE_NFP = 6;
+	int QUANTITATIVE_NFP = 5;
 
 	/**
 	 * The feature id for the '<em><b>Realization Values</b></em>' containment reference list.
@@ -377,7 +304,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getMeasure()
 	 * @generated
 	 */
-	int MEASURE = 7;
+	int MEASURE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Measurement Unit</b></em>' reference.
@@ -441,7 +368,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getUnit()
 	 * @generated
 	 */
-	int UNIT = 8;
+	int UNIT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Conv Factor</b></em>' attribute.
@@ -496,16 +423,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getQualitativeNFP()
 	 * @generated
 	 */
-	int QUALITATIVE_NFP = 9;
-
-	/**
-	 * The feature id for the '<em><b>Parameter</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUALITATIVE_NFP__PARAMETER = ABSTRACT_NFP_FEATURE_COUNT + 0;
+	int QUALITATIVE_NFP = 8;
 
 	/**
 	 * The number of structural features of the '<em>Qualitative NFP</em>' class.
@@ -514,7 +432,7 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUALITATIVE_NFP_FEATURE_COUNT = ABSTRACT_NFP_FEATURE_COUNT + 1;
+	int QUALITATIVE_NFP_FEATURE_COUNT = ABSTRACT_NFP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Qualitative NFP</em>' class.
@@ -579,38 +497,6 @@ public interface NFP_NatruePackage extends EPackage {
 	EAttribute getSampleRealization_MeasureName();
 
 	/**
-	 * Returns the meta object for class '{@link mARTE.NFP_Natrue.Dimension <em>Dimension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dimension</em>'.
-	 * @see mARTE.NFP_Natrue.Dimension
-	 * @generated
-	 */
-	EClass getDimension();
-
-	/**
-	 * Returns the meta object for the attribute '{@link mARTE.NFP_Natrue.Dimension#getSymbol <em>Symbol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Symbol</em>'.
-	 * @see mARTE.NFP_Natrue.Dimension#getSymbol()
-	 * @see #getDimension()
-	 * @generated
-	 */
-	EAttribute getDimension_Symbol();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mARTE.NFP_Natrue.Dimension#getBasequantity <em>Basequantity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Basequantity</em>'.
-	 * @see mARTE.NFP_Natrue.Dimension#getBasequantity()
-	 * @see #getDimension()
-	 * @generated
-	 */
-	EReference getDimension_Basequantity();
-
-	/**
 	 * Returns the meta object for class '{@link mARTE.NFP_Natrue.AbstractNFP <em>Abstract NFP</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -640,17 +526,6 @@ public interface NFP_NatruePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQuantity_AllowedUnits();
-
-	/**
-	 * Returns the meta object for the reference '{@link mARTE.NFP_Natrue.Quantity#getDimension <em>Dimension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Dimension</em>'.
-	 * @see mARTE.NFP_Natrue.Quantity#getDimension()
-	 * @see #getQuantity()
-	 * @generated
-	 */
-	EReference getQuantity_Dimension();
 
 	/**
 	 * Returns the meta object for class '{@link mARTE.NFP_Natrue.QuantitativeNFP <em>Quantitative NFP</em>}'.
@@ -803,17 +678,6 @@ public interface NFP_NatruePackage extends EPackage {
 	EClass getQualitativeNFP();
 
 	/**
-	 * Returns the meta object for the reference list '{@link mARTE.NFP_Natrue.QualitativeNFP#getParameter <em>Parameter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Parameter</em>'.
-	 * @see mARTE.NFP_Natrue.QualitativeNFP#getParameter()
-	 * @see #getQualitativeNFP()
-	 * @generated
-	 */
-	EReference getQualitativeNFP_Parameter();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -883,32 +747,6 @@ public interface NFP_NatruePackage extends EPackage {
 		EAttribute SAMPLE_REALIZATION__MEASURE_NAME = eINSTANCE.getSampleRealization_MeasureName();
 
 		/**
-		 * The meta object literal for the '{@link mARTE.NFP_Natrue.impl.DimensionImpl <em>Dimension</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mARTE.NFP_Natrue.impl.DimensionImpl
-		 * @see mARTE.NFP_Natrue.impl.NFP_NatruePackageImpl#getDimension()
-		 * @generated
-		 */
-		EClass DIMENSION = eINSTANCE.getDimension();
-
-		/**
-		 * The meta object literal for the '<em><b>Symbol</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DIMENSION__SYMBOL = eINSTANCE.getDimension_Symbol();
-
-		/**
-		 * The meta object literal for the '<em><b>Basequantity</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DIMENSION__BASEQUANTITY = eINSTANCE.getDimension_Basequantity();
-
-		/**
 		 * The meta object literal for the '{@link mARTE.NFP_Natrue.impl.AbstractNFPImpl <em>Abstract NFP</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -935,14 +773,6 @@ public interface NFP_NatruePackage extends EPackage {
 		 * @generated
 		 */
 		EReference QUANTITY__ALLOWED_UNITS = eINSTANCE.getQuantity_AllowedUnits();
-
-		/**
-		 * The meta object literal for the '<em><b>Dimension</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUANTITY__DIMENSION = eINSTANCE.getQuantity_Dimension();
 
 		/**
 		 * The meta object literal for the '{@link mARTE.NFP_Natrue.impl.QuantitativeNFPImpl <em>Quantitative NFP</em>}' class.
@@ -1063,14 +893,6 @@ public interface NFP_NatruePackage extends EPackage {
 		 * @generated
 		 */
 		EClass QUALITATIVE_NFP = eINSTANCE.getQualitativeNFP();
-
-		/**
-		 * The meta object literal for the '<em><b>Parameter</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUALITATIVE_NFP__PARAMETER = eINSTANCE.getQualitativeNFP_Parameter();
 
 	}
 

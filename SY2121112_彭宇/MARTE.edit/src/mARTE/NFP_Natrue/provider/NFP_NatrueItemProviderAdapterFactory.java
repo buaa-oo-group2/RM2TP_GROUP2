@@ -141,29 +141,6 @@ public class NFP_NatrueItemProviderAdapterFactory extends NFP_NatrueAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link mARTE.NFP_Natrue.Dimension} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DimensionItemProvider dimensionItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link mARTE.NFP_Natrue.Dimension}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDimensionAdapter() {
-		if (dimensionItemProvider == null) {
-			dimensionItemProvider = new DimensionItemProvider(this);
-		}
-
-		return dimensionItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link mARTE.NFP_Natrue.QuantitativeNFP} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -357,7 +334,6 @@ public class NFP_NatrueItemProviderAdapterFactory extends NFP_NatrueAdapterFacto
 		if (derivedQuantityItemProvider != null) derivedQuantityItemProvider.dispose();
 		if (baseQuantityItemProvider != null) baseQuantityItemProvider.dispose();
 		if (sampleRealizationItemProvider != null) sampleRealizationItemProvider.dispose();
-		if (dimensionItemProvider != null) dimensionItemProvider.dispose();
 		if (quantitativeNFPItemProvider != null) quantitativeNFPItemProvider.dispose();
 		if (measureItemProvider != null) measureItemProvider.dispose();
 		if (unitItemProvider != null) unitItemProvider.dispose();

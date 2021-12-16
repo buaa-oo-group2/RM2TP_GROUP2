@@ -9,7 +9,6 @@ import mARTE.Allocations.AllocationsPackage;
 import mARTE.Allocations.ApplicationAllocationEnd;
 import mARTE.Allocations.ExecutionPlatformAllocationEnd;
 import mARTE.Allocations.NFP_Constraint;
-import mARTE.Allocations.Refinement;
 
 import mARTE.NFP_Annotation.NFP_AnnotationPackage;
 
@@ -70,13 +69,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * @generated
 	 */
 	private EClass nfP_ConstraintEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass refinementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -230,42 +222,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRefinement() {
-		return refinementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRefinement_General() {
-		return (EReference)refinementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRefinement_Refined() {
-		return (EReference)refinementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRefinement_Constraint() {
-		return (EReference)refinementEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public AllocationsFactory getAllocationsFactory() {
 		return (AllocationsFactory)getEFactoryInstance();
 	}
@@ -301,11 +257,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		allocationEndEClass = createEClass(ALLOCATION_END);
 
 		nfP_ConstraintEClass = createEClass(NFP_CONSTRAINT);
-
-		refinementEClass = createEClass(REFINEMENT);
-		createEReference(refinementEClass, REFINEMENT__GENERAL);
-		createEReference(refinementEClass, REFINEMENT__REFINED);
-		createEReference(refinementEClass, REFINEMENT__CONSTRAINT);
 	}
 
 	/**
@@ -355,11 +306,6 @@ public class AllocationsPackageImpl extends EPackageImpl implements AllocationsP
 		initEClass(allocationEndEClass, AllocationEnd.class, "AllocationEnd", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(nfP_ConstraintEClass, NFP_Constraint.class, "NFP_Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(refinementEClass, Refinement.class, "Refinement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRefinement_General(), this.getAllocationEnd(), null, "general", null, 1, -1, Refinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRefinement_Refined(), this.getAllocationEnd(), null, "refined", null, 1, -1, Refinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRefinement_Constraint(), theNFP_AnnotationPackage.getNFP_Constraint(), null, "constraint", null, 0, -1, Refinement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

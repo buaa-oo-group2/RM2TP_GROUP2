@@ -17,7 +17,6 @@ import mARTE.NFP_Declaration.impl.NFP_DeclarationPackageImpl;
 import mARTE.NFP_Natrue.AbstractNFP;
 import mARTE.NFP_Natrue.BaseQuantity;
 import mARTE.NFP_Natrue.DerivedQuantity;
-import mARTE.NFP_Natrue.Dimension;
 import mARTE.NFP_Natrue.Measure;
 import mARTE.NFP_Natrue.NFP_NatrueFactory;
 import mARTE.NFP_Natrue.NFP_NatruePackage;
@@ -63,13 +62,6 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 	 * @generated
 	 */
 	private EClass sampleRealizationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass dimensionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,33 +233,6 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDimension() {
-		return dimensionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDimension_Symbol() {
-		return (EAttribute)dimensionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDimension_Basequantity() {
-		return (EReference)dimensionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAbstractNFP() {
 		return abstractNFPEClass;
 	}
@@ -288,15 +253,6 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 	 */
 	public EReference getQuantity_AllowedUnits() {
 		return (EReference)quantityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuantity_Dimension() {
-		return (EReference)quantityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -430,15 +386,6 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQualitativeNFP_Parameter() {
-		return (EReference)qualitativeNFPEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public NFP_NatrueFactory getNFP_NatrueFactory() {
 		return (NFP_NatrueFactory)getEFactoryInstance();
 	}
@@ -470,15 +417,10 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 		createEReference(sampleRealizationEClass, SAMPLE_REALIZATION__FUNCTION);
 		createEAttribute(sampleRealizationEClass, SAMPLE_REALIZATION__MEASURE_NAME);
 
-		dimensionEClass = createEClass(DIMENSION);
-		createEAttribute(dimensionEClass, DIMENSION__SYMBOL);
-		createEReference(dimensionEClass, DIMENSION__BASEQUANTITY);
-
 		abstractNFPEClass = createEClass(ABSTRACT_NFP);
 
 		quantityEClass = createEClass(QUANTITY);
 		createEReference(quantityEClass, QUANTITY__ALLOWED_UNITS);
-		createEReference(quantityEClass, QUANTITY__DIMENSION);
 
 		quantitativeNFPEClass = createEClass(QUANTITATIVE_NFP);
 		createEReference(quantitativeNFPEClass, QUANTITATIVE_NFP__REALIZATION_VALUES);
@@ -497,7 +439,6 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 		createEReference(unitEClass, UNIT__BASE_UNIT);
 
 		qualitativeNFPEClass = createEClass(QUALITATIVE_NFP);
-		createEReference(qualitativeNFPEClass, QUALITATIVE_NFP__PARAMETER);
 	}
 
 	/**
@@ -545,15 +486,10 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 		initEReference(getSampleRealization_Function(), this.getMeasure(), this.getMeasure_Domain(), "function", null, 0, -1, SampleRealization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSampleRealization_MeasureName(), theXMLTypePackage.getString(), "measureName", null, 0, 1, SampleRealization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dimensionEClass, Dimension.class, "Dimension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDimension_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 1, Dimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDimension_Basequantity(), this.getBaseQuantity(), null, "basequantity", null, 0, -1, Dimension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(abstractNFPEClass, AbstractNFP.class, "AbstractNFP", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(quantityEClass, Quantity.class, "Quantity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuantity_AllowedUnits(), this.getUnit(), null, "allowedUnits", null, 0, -1, Quantity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuantity_Dimension(), this.getDimension(), null, "dimension", null, 0, 1, Quantity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(quantitativeNFPEClass, QuantitativeNFP.class, "QuantitativeNFP", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQuantitativeNFP_RealizationValues(), this.getSampleRealization(), null, "realizationValues", null, 0, -1, QuantitativeNFP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -572,7 +508,6 @@ public class NFP_NatruePackageImpl extends EPackageImpl implements NFP_NatruePac
 		initEReference(getUnit_BaseUnit(), this.getUnit(), null, "baseUnit", null, 0, 1, Unit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qualitativeNFPEClass, QualitativeNFP.class, "QualitativeNFP", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQualitativeNFP_Parameter(), this.getAbstractNFP(), null, "parameter", null, 0, -1, QualitativeNFP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -222,61 +222,6 @@ public interface AllocationsPackage extends EPackage {
 	 */
 	int NFP_CONSTRAINT_OPERATION_COUNT = 0;
 
-	/**
-	 * The meta object id for the '{@link mARTE.Allocations.impl.RefinementImpl <em>Refinement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see mARTE.Allocations.impl.RefinementImpl
-	 * @see mARTE.Allocations.impl.AllocationsPackageImpl#getRefinement()
-	 * @generated
-	 */
-	int REFINEMENT = 5;
-
-	/**
-	 * The feature id for the '<em><b>General</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT__GENERAL = 0;
-
-	/**
-	 * The feature id for the '<em><b>Refined</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT__REFINED = 1;
-
-	/**
-	 * The feature id for the '<em><b>Constraint</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT__CONSTRAINT = 2;
-
-	/**
-	 * The number of structural features of the '<em>Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Refinement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFINEMENT_OPERATION_COUNT = 0;
-
 
 	/**
 	 * Returns the meta object for class '{@link mARTE.Allocations.ExecutionPlatformAllocationEnd <em>Execution Platform Allocation End</em>}'.
@@ -360,49 +305,6 @@ public interface AllocationsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNFP_Constraint();
-
-	/**
-	 * Returns the meta object for class '{@link mARTE.Allocations.Refinement <em>Refinement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Refinement</em>'.
-	 * @see mARTE.Allocations.Refinement
-	 * @generated
-	 */
-	EClass getRefinement();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mARTE.Allocations.Refinement#getGeneral <em>General</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>General</em>'.
-	 * @see mARTE.Allocations.Refinement#getGeneral()
-	 * @see #getRefinement()
-	 * @generated
-	 */
-	EReference getRefinement_General();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mARTE.Allocations.Refinement#getRefined <em>Refined</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Refined</em>'.
-	 * @see mARTE.Allocations.Refinement#getRefined()
-	 * @see #getRefinement()
-	 * @generated
-	 */
-	EReference getRefinement_Refined();
-
-	/**
-	 * Returns the meta object for the reference list '{@link mARTE.Allocations.Refinement#getConstraint <em>Constraint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Constraint</em>'.
-	 * @see mARTE.Allocations.Refinement#getConstraint()
-	 * @see #getRefinement()
-	 * @generated
-	 */
-	EReference getRefinement_Constraint();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -500,40 +402,6 @@ public interface AllocationsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass NFP_CONSTRAINT = eINSTANCE.getNFP_Constraint();
-
-		/**
-		 * The meta object literal for the '{@link mARTE.Allocations.impl.RefinementImpl <em>Refinement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see mARTE.Allocations.impl.RefinementImpl
-		 * @see mARTE.Allocations.impl.AllocationsPackageImpl#getRefinement()
-		 * @generated
-		 */
-		EClass REFINEMENT = eINSTANCE.getRefinement();
-
-		/**
-		 * The meta object literal for the '<em><b>General</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFINEMENT__GENERAL = eINSTANCE.getRefinement_General();
-
-		/**
-		 * The meta object literal for the '<em><b>Refined</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFINEMENT__REFINED = eINSTANCE.getRefinement_Refined();
-
-		/**
-		 * The meta object literal for the '<em><b>Constraint</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REFINEMENT__CONSTRAINT = eINSTANCE.getRefinement_Constraint();
 
 	}
 

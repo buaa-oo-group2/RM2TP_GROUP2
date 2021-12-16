@@ -80,10 +80,6 @@ public class NFP_NatrueAdapterFactory extends AdapterFactoryImpl {
 				return createSampleRealizationAdapter();
 			}
 			@Override
-			public Adapter caseDimension(Dimension object) {
-				return createDimensionAdapter();
-			}
-			@Override
 			public Adapter caseAbstractNFP(AbstractNFP object) {
 				return createAbstractNFPAdapter();
 			}
@@ -166,20 +162,6 @@ public class NFP_NatrueAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSampleRealizationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link mARTE.NFP_Natrue.Dimension <em>Dimension</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see mARTE.NFP_Natrue.Dimension
-	 * @generated
-	 */
-	public Adapter createDimensionAdapter() {
 		return null;
 	}
 

@@ -58,15 +58,6 @@ public interface AllocationsFactory extends EFactory {
 	NFP_Constraint createNFP_Constraint();
 
 	/**
-	 * Returns a new object of class '<em>Refinement</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Refinement</em>'.
-	 * @generated
-	 */
-	Refinement createRefinement();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

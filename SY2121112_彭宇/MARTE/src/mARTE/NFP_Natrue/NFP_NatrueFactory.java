@@ -49,15 +49,6 @@ public interface NFP_NatrueFactory extends EFactory {
 	SampleRealization createSampleRealization();
 
 	/**
-	 * Returns a new object of class '<em>Dimension</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dimension</em>'.
-	 * @generated
-	 */
-	Dimension createDimension();
-
-	/**
 	 * Returns a new object of class '<em>Quantitative NFP</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

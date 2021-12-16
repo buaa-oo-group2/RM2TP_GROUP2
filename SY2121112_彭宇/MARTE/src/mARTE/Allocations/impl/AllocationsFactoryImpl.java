@@ -60,7 +60,6 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 			case AllocationsPackage.APPLICATION_ALLOCATION_END: return createApplicationAllocationEnd();
 			case AllocationsPackage.ALLOCATION: return createAllocation();
 			case AllocationsPackage.NFP_CONSTRAINT: return createNFP_Constraint();
-			case AllocationsPackage.REFINEMENT: return createRefinement();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -104,16 +103,6 @@ public class AllocationsFactoryImpl extends EFactoryImpl implements AllocationsF
 	public NFP_Constraint createNFP_Constraint() {
 		NFP_ConstraintImpl nfP_Constraint = new NFP_ConstraintImpl();
 		return nfP_Constraint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Refinement createRefinement() {
-		RefinementImpl refinement = new RefinementImpl();
-		return refinement;
 	}
 
 	/**

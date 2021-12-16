@@ -10,16 +10,10 @@
           eType="#//NFP_Natrue/Measure" eOpposite="#//NFP_Natrue/Measure/domain"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="measureName" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Dimension">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="symbol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="basequantity" upperBound="-1"
-          eType="#//NFP_Natrue/BaseQuantity"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AbstractNFP" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="Quantity" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EReference" name="allowedUnits" upperBound="-1"
           eType="#//NFP_Natrue/Unit"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="dimension" eType="#//NFP_Natrue/Dimension"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="QuantitativeNFP" eSuperTypes="#//NFP_Natrue/AbstractNFP">
       <eStructuralFeatures xsi:type="ecore:EReference" name="realizationValues" upperBound="-1"
@@ -40,10 +34,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="convOffset" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//DoubleObject"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="baseUnit" eType="#//NFP_Natrue/Unit"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="QualitativeNFP" eSuperTypes="#//NFP_Natrue/AbstractNFP">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
-          eType="#//NFP_Natrue/AbstractNFP"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="QualitativeNFP" eSuperTypes="#//NFP_Natrue/AbstractNFP"/>
   </eSubpackages>
   <eSubpackages name="NFP_Annotation" nsURI="http://www.example.org/mARTE/NFP_Annotation"
       nsPrefix="annotation">
@@ -103,13 +94,5 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="AllocationEnd" abstract="true"/>
     <eClassifiers xsi:type="ecore:EClass" name="NFP_Constraint"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Refinement">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
-          upperBound="-1" eType="#//Allocations/AllocationEnd"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="refined" lowerBound="1"
-          upperBound="-1" eType="#//Allocations/AllocationEnd"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="constraint" upperBound="-1"
-          eType="#//NFP_Annotation/NFP_Constraint"/>
-    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

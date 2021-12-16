@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link mARTE.NFP_Natrue.Quantity#getAllowedUnits <em>Allowed Units</em>}</li>
- *   <li>{@link mARTE.NFP_Natrue.Quantity#getDimension <em>Dimension</em>}</li>
  * </ul>
  *
  * @see mARTE.NFP_Natrue.NFP_NatruePackage#getQuantity()
@@ -35,27 +34,5 @@ public interface Quantity extends EObject {
 	 * @generated
 	 */
 	EList<Unit> getAllowedUnits();
-
-	/**
-	 * Returns the value of the '<em><b>Dimension</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dimension</em>' reference.
-	 * @see #setDimension(Dimension)
-	 * @see mARTE.NFP_Natrue.NFP_NatruePackage#getQuantity_Dimension()
-	 * @model
-	 * @generated
-	 */
-	Dimension getDimension();
-
-	/**
-	 * Sets the value of the '{@link mARTE.NFP_Natrue.Quantity#getDimension <em>Dimension</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dimension</em>' reference.
-	 * @see #getDimension()
-	 * @generated
-	 */
-	void setDimension(Dimension value);
 
 } // Quantity

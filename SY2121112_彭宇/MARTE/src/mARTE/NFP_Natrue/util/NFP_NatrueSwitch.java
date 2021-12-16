@@ -86,12 +86,6 @@ public class NFP_NatrueSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case NFP_NatruePackage.DIMENSION: {
-				Dimension dimension = (Dimension)theEObject;
-				T result = caseDimension(dimension);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case NFP_NatruePackage.ABSTRACT_NFP: {
 				AbstractNFP abstractNFP = (AbstractNFP)theEObject;
 				T result = caseAbstractNFP(abstractNFP);
@@ -176,21 +170,6 @@ public class NFP_NatrueSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSampleRealization(SampleRealization object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dimension</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dimension</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDimension(Dimension object) {
 		return null;
 	}
 

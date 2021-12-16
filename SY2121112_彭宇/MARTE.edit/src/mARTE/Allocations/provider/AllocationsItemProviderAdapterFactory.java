@@ -164,29 +164,6 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link mARTE.Allocations.Refinement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RefinementItemProvider refinementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link mARTE.Allocations.Refinement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRefinementAdapter() {
-		if (refinementItemProvider == null) {
-			refinementItemProvider = new RefinementItemProvider(this);
-		}
-
-		return refinementItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -289,7 +266,6 @@ public class AllocationsItemProviderAdapterFactory extends AllocationsAdapterFac
 		if (applicationAllocationEndItemProvider != null) applicationAllocationEndItemProvider.dispose();
 		if (allocationItemProvider != null) allocationItemProvider.dispose();
 		if (nfP_ConstraintItemProvider != null) nfP_ConstraintItemProvider.dispose();
-		if (refinementItemProvider != null) refinementItemProvider.dispose();
 	}
 
 }

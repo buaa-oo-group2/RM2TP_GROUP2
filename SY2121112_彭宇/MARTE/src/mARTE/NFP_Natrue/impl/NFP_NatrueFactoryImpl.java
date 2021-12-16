@@ -59,7 +59,6 @@ public class NFP_NatrueFactoryImpl extends EFactoryImpl implements NFP_NatrueFac
 			case NFP_NatruePackage.DERIVED_QUANTITY: return createDerivedQuantity();
 			case NFP_NatruePackage.BASE_QUANTITY: return createBaseQuantity();
 			case NFP_NatruePackage.SAMPLE_REALIZATION: return createSampleRealization();
-			case NFP_NatruePackage.DIMENSION: return createDimension();
 			case NFP_NatruePackage.QUANTITATIVE_NFP: return createQuantitativeNFP();
 			case NFP_NatruePackage.MEASURE: return createMeasure();
 			case NFP_NatruePackage.UNIT: return createUnit();
@@ -97,16 +96,6 @@ public class NFP_NatrueFactoryImpl extends EFactoryImpl implements NFP_NatrueFac
 	public SampleRealization createSampleRealization() {
 		SampleRealizationImpl sampleRealization = new SampleRealizationImpl();
 		return sampleRealization;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Dimension createDimension() {
-		DimensionImpl dimension = new DimensionImpl();
-		return dimension;
 	}
 
 	/**

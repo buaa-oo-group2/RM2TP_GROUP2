@@ -58,7 +58,6 @@ public class QuantityItemProvider
 			super.getPropertyDescriptors(object);
 
 			addAllowedUnitsPropertyDescriptor(object);
-			addDimensionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -77,28 +76,6 @@ public class QuantityItemProvider
 				 getString("_UI_Quantity_allowedUnits_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Quantity_allowedUnits_feature", "_UI_Quantity_type"),
 				 NFP_NatruePackage.Literals.QUANTITY__ALLOWED_UNITS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dimension feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDimensionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Quantity_dimension_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Quantity_dimension_feature", "_UI_Quantity_type"),
-				 NFP_NatruePackage.Literals.QUANTITY__DIMENSION,
 				 true,
 				 false,
 				 true,
