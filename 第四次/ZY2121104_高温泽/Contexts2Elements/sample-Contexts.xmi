@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="Contexts">
+	<Variable variableID="699">
+		<v_context contextID="1024"/>
+	</Variable>
 	<AnalysisContext contextID="1024">
-		<behavior behaviorID="9986"/>
-		<behavior behaviorID="9987"/>
-		<behavior behaviorID="9988"/>
+		<c_variable variableID="699"/>
+		<behavior behaviorID="9986">
+			<demand eventID="450">
+				<generator generatorID="27"/>
+				<trace traceID="18"/>
+			</demand>
+			<demand eventID="451">
+				<generator generatorID="28"/>
+				<trace traceID="19"/>
+			</demand>
+		</behavior>
+		<behavior behaviorID="9987">
+			<demand eventID="602">
+				<generator generatorID="32"/>
+				<trace traceID="25"/>
+			</demand>
+			<demand eventID="603">
+				<generator generatorID="33"/>
+				<trace traceID="26"/>
+			</demand>
+		</behavior>
+		<platform platformID="297"/>
 		<platform platformID="298"/>
 		<platform platformID="299"/>
-	</AnalysisContext>
-	<AnalysisContext contextID="1120">
-		<behavior behaviorID="10066"/>
-		<behavior behaviorID="10067"/>
-		<behavior behaviorID="10068"/>
-		<platform platformID="1225"/>
-		<platform platformID="1226"/>
-		<platform platformID="1227"/>
 	</AnalysisContext>
 </xmi:XMI>

@@ -111,4 +111,105 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="host" eType="#//ExecutionHost"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="concurRes" eType="#//SchedulableResource"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExecutionHost"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrecedenceRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationStep" eSuperTypes="#//Step.1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="host" eType="#//CommunicationHost.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concurRes" eType="#//CommunicationChannel.1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="passedRes" eType="#//ResourcePassStep.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relRes" eType="#//ReleaseStep.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acqRes" eType="#//AcquireStep.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceplatform" eType="#//ResourcePlatform.1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationChannel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequestedService" eSuperTypes="#//Step.1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReleaseStep" eSuperTypes="#//Step.1"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConnectorKind">
+    <eLiterals name="Sequence"/>
+    <eLiterals name="Branch" value="1"/>
+    <eLiterals name="Merge" value="2"/>
+    <eLiterals name="Fork" value="3"/>
+    <eLiterals name="Join" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommunicationHost"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BehaviorScenario">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostDemand" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hostDemandOps" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interOccT" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="throughPut" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="respT" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="utilization" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="utilizationOnHost" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="root" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="steps" eType="#//Step.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" lowerBound="1"
+        eType="#//PrecedenceRelation.1" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkloadEvent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pattern" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trace" eType="#//EventTrace.1"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generator" eType="#//WorkloadGenerator.1"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PAM_Step" eSuperTypes="#//Step.1">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noSync" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalOpDemands" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalOpCount" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="behaviorDemands" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnySimpleType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="behaviorCount" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="host" eType="#//ExecutionHost.1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="concurRes" eType="#//SchedulableResource.1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AcquireStep" eSuperTypes="#//Step.1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePassStep" eSuperTypes="#//Step.1">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resUnits" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EventTrace"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SchedulableResource"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="EventStreamKind">
+    <eLiterals name="Generator"/>
+    <eLiterals name="Pattern" value="1"/>
+    <eLiterals name="Trace" value="2"/>
+    <eLiterals name="Timed" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkloadGenerator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="population" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Integer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Step"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkloadBehavior">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="demand" lowerBound="1"
+        upperBound="-1" eType="#//WorkloadEvent.1" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behavior" lowerBound="1"
+        upperBound="-1" eType="#//BehaviorScenario.1" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisContext" eSuperTypes="#//ExpressionContext.1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" lowerBound="1"
+        eType="#//Variable.1" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workloadbehavior" lowerBound="1"
+        upperBound="-1" eType="#//WorkloadBehavior.3"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceplatform" lowerBound="1"
+        upperBound="-1" eType="#//ResourcePlatform.1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpressionContext"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePlatform"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SaAnalysisContext" eSuperTypes="#//AnalysisContext.2">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSchedulable" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="optimalityCriterion" upperBound="4"
+        eType="#//OptimalityCriterionKind.1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OptimalityCriterionKind">
+    <eLiterals name="meetHardDeadlines"/>
+    <eLiterals name="minimizeMissedDeadlines" value="1"/>
+    <eLiterals name="minimizeMeanTardiness" value="2"/>
+    <eLiterals name="undef" value="3"/>
+    <eLiterals name="other" value="4"/>
+  </eClassifiers>
 </ecore:EPackage>

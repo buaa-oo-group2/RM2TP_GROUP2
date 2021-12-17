@@ -2,10 +2,39 @@ module Contexts2Elements;
 -- @path Contexts=/Contexts2Elements/Contexts.ecore
 -- @path Elements=/Contexts2Elements/Elements.ecore
 create OUT: Elements from IN: Contexts;
-helper context Contexts!WorkloadBehavior def: behaviorInContextID: String = self.behaviorInContext.contextID;
-	
+
+helper context Contexts!AnalysisContext def: c_variableID: String = self.c_variable.variableID;
+
+helper context Contexts!Variable def: v_contextID: String = self.v_context.contextID;
+
 helper context Contexts!ResourcePlatform def: platformInContextID: String = self.platformInContext.contextID;
-	
+
+helper context Contexts!WorkloadBehavior def: behaviorInContextID: String = self.behaviorInContext.contextID;
+
+helper context Contexts!WorkloadEvent def: eventInBehaviorID: String = self.eventInBehavior.behaviorID;
+
+helper context Contexts!WorkloadGenerator def: generatorInEventID: String = self.generatorInEvent.eventID;
+
+helper context Contexts!EventTrace def: traceInEventID: String = self.traceInEvent.eventID;
+
+rule Variable2Variable {
+	from
+		s: Contexts!Variable 
+	to
+		t: Elements!Variable (
+			elementID <- 'variable ID ' + s.variableID + '  with context ID ' + s.v_contextID
+		)
+}
+
+rule AnalysisContext2Context {
+	from
+		s: Contexts!AnalysisContext 
+	to
+		t: Elements!Context (
+			elementID <- 'context ID ' + s.contextID + '  with variable ID ' + s.c_variableID
+		)
+}
+
 rule WorkloadBehavior2Behavior {
 	from
 		s: Contexts!WorkloadBehavior 
@@ -21,5 +50,32 @@ rule ResourcePlatform2Platform {
 	to
 		t: Elements!Platform (
 			elementID <- 'platform ID ' + s.platformID + '  in context ID ' + s.platformInContextID
+		)
+}
+
+rule WorkloadEvent2Event {
+	from
+		s: Contexts!WorkloadEvent 
+	to
+		t: Elements!Event (
+			elementID <- 'event ID ' + s.eventID + '  in behavior ID ' + s.eventInBehaviorID
+		)
+}
+
+rule WorkloadGenerator2Generator {
+	from
+		s: Contexts!WorkloadGenerator 
+	to
+		t: Elements!Generator (
+			elementID <- 'generator ID ' + s.generatorID + '  in event ID ' + s.generatorInEventID
+		)
+}
+
+rule EventTrace2Trace {
+	from
+		s: Contexts!EventTrace 
+	to
+		t: Elements!Trace (
+			elementID <- 'trace ID ' + s.traceID + '  in event ID ' + s.traceInEventID
 		)
 }

@@ -5,6 +5,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementID" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Context" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="Behavior" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="Platform" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Generator" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Trace" eSuperTypes="#//Element"/>
 </ecore:EPackage>
