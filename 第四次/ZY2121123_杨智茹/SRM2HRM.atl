@@ -1,0 +1,15 @@
+-- @path SRM=/SRM2HRM/SRM.ecore
+-- @path HRM=/SRM2HRM/HRM.ecore
+
+module SRM2HRM;
+create OUT: HRM from IN: SRM;
+
+rule Resource2Resource {
+	from
+		s: SRM!Resource
+	to
+		t:HRM!Resource (
+			name <- s.name 
+		)
+}
+

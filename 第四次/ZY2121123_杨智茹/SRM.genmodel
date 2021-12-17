@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SRM2HRM/src" modelPluginID="SRM2HRM" modelName="SRM"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>SRM.ecore</foreignModel>
+  <genPackages prefix="SRM" disposableProviderFactory="true" ecorePackage="SRM.ecore#/">
+    <genClasses ecoreClass="SRM.ecore#//SW_CommunicationResource"/>
+    <genClasses ecoreClass="SRM.ecore#//SW_ComputingResource"/>
+    <genClasses ecoreClass="SRM.ecore#//MemoryPartition"/>
+    <genClasses ecoreClass="SRM.ecore#//InterruptResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SRM.ecore#//InterruptResource/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="SRM.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SRM.ecore#//Resource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SRM.ecore#//SW_Resource"/>
+    <genClasses ecoreClass="SRM.ecore#//SW_Channel"/>
+    <genClasses ecoreClass="SRM.ecore#//SW_Piple"/>
+    <genClasses ecoreClass="SRM.ecore#//Process">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SRM.ecore#//Process/preferProcessor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SRM.ecore#//Process/memorypartition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SRM.ecore#//Process/sw_computingresource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SRM.ecore#//Process/sw_communicationresource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SRM.ecore#//Process/interruptresource"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
