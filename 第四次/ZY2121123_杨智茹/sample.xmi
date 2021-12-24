@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="SRM">
-	<Resource name="March"/>
+	<Process preferProcessor="1">
+		<sw_computingresource freq="0x7777ffff" timeslice="15"/>
+		<memorypartition size="1" addr="0xdddddd"/>
+	</Process>
 </xmi:XMI>

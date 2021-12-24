@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="HRM" nsURI="yangzhiru" nsPrefix="yangzhiru">
-  <eClassifiers xsi:type="ecore:EClass" name="Resource">
+  <eClassifiers xsi:type="ecore:EClass" name="Resource" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HW_ComputingResource" eSuperTypes="#//HwResource">
@@ -14,11 +14,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addr" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HW_CommunicationResource" eSuperTypes="#//HwResource"/>
-  <eClassifiers xsi:type="ecore:EClass" name="HwResource" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HwResource" abstract="true" eSuperTypes="#//Resource"/>
   <eClassifiers xsi:type="ecore:EClass" name="HW_Bridge" eSuperTypes="#//HW_CommunicationResource"/>
-  <eClassifiers xsi:type="ecore:EClass" name="HW_Processor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HW_Processor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="freq" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HW_Clock" eSuperTypes="#//HwResource">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="freq" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

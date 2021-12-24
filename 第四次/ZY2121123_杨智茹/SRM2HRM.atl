@@ -4,12 +4,38 @@
 module SRM2HRM;
 create OUT: HRM from IN: SRM;
 
-rule Resource2Resource {
+rule MemoryPartition2MemSize {
 	from
-		s: SRM!Resource
+		s: SRM!MemoryPartition
 	to
-		t:HRM!Resource (
-			name <- s.name 
+		t:HRM!HW_Memory (
+			size <- s.size
 		)
 }
 
+rule MemoryPartition2MemAddr {
+	from
+		s: SRM!MemoryPartition
+	to
+		t:HRM!HW_Memory (
+			addr <- s.addr
+		)
+}
+
+rule SW_ComputingResource2HW_Clock {
+	from
+		s: SRM!SW_ComputingResource
+	to
+		t:HRM!HW_Clock (
+			length <- s.timeslice
+		)
+}
+
+rule SW_ComputingResource2HW_Processor {
+	from
+		s: SRM!SW_ComputingResource
+	to
+		t:HRM!HW_Clock (
+			freq <- s.freq
+		)
+}

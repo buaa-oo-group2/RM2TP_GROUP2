@@ -2,7 +2,10 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="SRM" nsURI="yangzhiru" nsPrefix="yangzhiru">
   <eClassifiers xsi:type="ecore:EClass" name="SW_CommunicationResource" eSuperTypes="#//SW_Resource"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SW_ComputingResource" eSuperTypes="#//SW_Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SW_ComputingResource" eSuperTypes="#//SW_Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="freq" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeslice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MemoryPartition" eSuperTypes="#//SW_Resource">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="addr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
